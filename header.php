@@ -88,7 +88,7 @@
 	<?php
 	if(!is_front_page() && !is_product()) {
 		if(is_shop() || is_archive()){
-			$page_id = woocommerce_get_page_id('shop'); 
+			$page_id = wc_get_page_id('shop'); 
 		}else{
 			$page_id = get_the_ID();
 		}
