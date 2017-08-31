@@ -13,11 +13,11 @@ add_action( 'woocommerce_after_main_content', 'sos_after_main_content', 11);
 
 add_action( 'init', 'sos_remove_sidebar' );
 function sos_remove_sidebar() {
-	remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+	// remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 }
 
 function sos_remove_wc_breadcrumbs() {
-    remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+    // remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
 }
 add_action( 'init', 'sos_remove_wc_breadcrumbs' );
 
@@ -27,21 +27,22 @@ function sos_excerpt_more($more) {
 }
 add_filter('excerpt_more', 'sos_excerpt_more');
 
+
 function sos_init_woo_hooks() {
-	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+	// remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
 	add_action( 'woocommerce_before_single_product_summary', 'woocommerce_sos_single_title', 9 );
 
-	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+	// remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
 	add_action( 'woocommerce_before_single_product_summary', 'woocommerce_template_single_excerpt', 9 );
 
-	remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+	// remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
 	add_action( 'woocommerce_single_product_summary', 'woocommerce_output_product_data_tabs', 20 );
 	
 	//add_action( 'woocommerce_single_product_summary', 'sos_show_pdf_link_frontend', 25 );
 	
-	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+	// remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
 	
-	remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+	// remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 	//add_action( 'woocommerce_after_single_product_summary', 'sos_output_related_categories', 20 );
 	
 }

@@ -8,6 +8,8 @@ function sos_scripts() {
 	// Load style
 	wp_enqueue_style( 'sos-bootstrap-style', get_theme_file_uri( '/assets/css/bootstrap.min.css' ));
 	wp_enqueue_style( 'sos-font-awesome', get_theme_file_uri( '/assets/css/font-awesome.min.css' ) );
+	wp_enqueue_style( 'customize', get_theme_file_uri( '/customize.css' ) );
+
 	wp_enqueue_style( 'sos-style', get_stylesheet_uri() );
 		
 	// Load scripts

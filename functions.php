@@ -8,6 +8,7 @@ include(get_template_directory() . '/includes/widgets_init.php');
 include(get_template_directory() . '/includes/front_enqueue.php');
 include(get_template_directory() . '/includes/custom_post_type.php');
 include(get_template_directory() . '/includes/meta_box_save.php');
+include(get_template_directory() . '/includes/header_menu_add_class.php');
 
 
 
@@ -18,16 +19,9 @@ add_action( 'wp_enqueue_scripts', 'sos_scripts' );
 add_action( 'init', 'sos_register_cpt' );
 add_action( 'add_meta_boxes', 'sos_add_events_metaboxes' );
 add_action( 'save_post', 'sos_meta_box_save' );
+
 // filters
 add_filter( 'nav_menu_link_attributes', 'sos_header_menu_add_class', 10, 3 );//Add page scroll for anchor tag- navigation
-
-function sos_header_menu_add_class( $atts, $item, $args ) {
-	if( $args->theme_location=='top') {
-		$class = 'page-scroll';
-		$atts['class'] = $class;
-	}
-    return $atts;
-}
 
 require_once('wp-bootstrap-navwalker.php');
 

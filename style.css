@@ -31,7 +31,7 @@ b, strong {
 
 .watermark {
     background:rgba(0, 0, 0, 0) url("assets/images/watermark.png") no-repeat scroll 20% 0;
-    padding-top:255px;
+    // padding-top:255px;
 }
 
 .home .watermark {
@@ -86,7 +86,7 @@ b, strong {
 	/* Added `.affix-top` class css when the element is top */
 	/* Added `.affix` class css when the element is >= 170px (Look: line 8 html) */
 	/* Added `.affix-bottom` class css when the element is footer */
-	top: 0px;    
+	// top: 0px;    
 }
 .custom-logo {
     height: auto; 
@@ -206,12 +206,12 @@ b, strong {
     padding: 6px 20px;
 }
 #google_translate_element {
-    margin-top: 4px;
-    width:25%;    
-    float:right;
-    clear:both;
-    display: block;
-    height:47px;
+  /* margin-top: 4px; */
+  // width: 25%;
+  // float: right;
+  // clear: both;
+  // display: inline-block;
+  // height: 30px;
 }
 a.goog-logo-link {
     display:none;
@@ -387,9 +387,9 @@ img {
 #custom-search-input{
     padding: 0px;   
     background-color: #fff;
-    margin-top: 7px;    
-    width:45%;
-    float:right;    
+    margin: 20px 0;
+    width: 100%;
+    /* float: right; */  
 }
 #custom-search-input .navbar-form {
     margin: 0px 0px;
@@ -398,8 +398,8 @@ img {
 #custom-search-input input{
     border: 0;
     box-shadow: none;
-    font-size: 14px;
-    height: 35px;
+      font-size: 17px;
+      height: 50px;
     border: solid 1px #E4E4E4;
     border-radius: 2px;
 }
@@ -430,11 +430,11 @@ img {
     height: 40px;
 }
 .goog-te-combo {
-    padding:0px 35px 0px 10px;
-    height: 35px;
-   float:right;
-   border: 1px solid #ddd;
-   background:#fff;
+  padding: 0px 0px 0px 0px;
+  height: 28px;
+  float: right;
+  border: none;
+  background: rgba(255, 255, 255, 0);
 }
 .input-group-btn {
     background:#c11b21;
@@ -447,7 +447,7 @@ img {
 .single-product #content {
     margin-top: 5px;
 }
-.single-product .watermark{padding-top: 235px;}
+// .single-product .watermark{padding-top: 235px;}
 .woocommerce #content div.product div.images {
     width: 35%;
 }
@@ -1174,12 +1174,12 @@ header.page-header {
 	padding: 0 8px;
 	text-transform: uppercase;
 }
-.navbar-absolute-top {
-    left: 0;
-    position: absolute;
-    right: 0;
-    z-index: 1030;
-}
+// .navbar-absolute-top {
+//     left: 0;
+//     position: absolute;
+//     right: 0;
+//     z-index: 1030;
+// }
 
 /* Dropdown menu css ends */
 div.autocomplete-suggestions {
@@ -1357,9 +1357,9 @@ span.cross-btn {
     .goog-te-combo {
        padding: 0px 10px 0px 10px;
     }
-    .navbar-toggle, #google_translate_element, #custom-search-input {
-        margin-top: 5px;
-    }
+    // .navbar-toggle, #google_translate_element, #custom-search-input {
+    //     margin-top: 5px;
+    // }
     .caret {
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;

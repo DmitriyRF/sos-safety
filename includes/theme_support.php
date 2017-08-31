@@ -21,8 +21,6 @@ function sos_setup() {
 
 	// Add theme support for Custom Logo.
 	add_theme_support( 'custom-logo', array(
-		'width'       => 300,
-		'height'      => 200,
 		'flex-width'  => true,
 	) );
 

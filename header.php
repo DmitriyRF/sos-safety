@@ -14,76 +14,139 @@
 <?php $template_url = get_bloginfo('template_url'); ?>
 <body <?php body_class(); ?>>
 <div class="wrap watermark">
-	<nav id="navbar-main" class="navbar navbar-custom navbar-absolute-top" role="navigation">
-         <!-- Brand and toggle get grouped for better mobile display -->
-		<div class="container">
-			<div class="row">  
-				<div class="hd-inner">
-					<div class="col-xs-4 col-sm-3 col-md-3 logobg">
-						<?php 					
-						if ( function_exists( 'the_custom_logo' ) ) {
-							the_custom_logo();
-						} ?>
-					</div>
-					<div class="col-xs-8 col-sm-9 col-md-9 nav-head">
-						<div class="nav-header-menu">
-							<div id="custom-search-input" class="yith-ajaxsearchform-container">
-								<form class="navbar-form" id="yith-ajaxsearchform" action="<?php echo get_bloginfo('url'); ?>" role="search">
-									<div class="input-group col-md-12">
-										<input type="text" id="yith-s" name="s" data-min-chars="3" data-loader-icon="" autocomplete="off" class="form-control input-lg yith-s" placeholder="<?php _e('Search', 'sos'); ?>" />
-										<span class="input-group-btn">
-										    <button class="btn btn-info btn-lg" id="yith-searchsubmit" type="submit">
-										        <i class="glyphicon glyphicon-search"></i>
-										    </button>
-										</span>
-									</div>
-								</form>
+	<header>
+		<div class="header-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="top-section">
+							<div class="show-top-header">
+								<div id="google_translate_element">
+								</div>
+								<script type="text/javascript">
+									function googleTranslateElementInit() {
+									  new google.translate.TranslateElement({
+										pageLanguage: 'en',
+										layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL    }, 'google_translate_element');
+									}
+								</script>
+								<script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+								
 							</div>
-							
-							<div id="google_translate_element"></div>
-							<script type="text/javascript">
-								function googleTranslateElementInit() {
-								  new google.translate.TranslateElement({
-									pageLanguage: 'en',
-									layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL    }, 'google_translate_element');
-								}
-							</script>
-							<script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 						</div>
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-								<span class="sr-only"><?php _e('Toggle navigation', 'sos'); ?></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-						</div>
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse nav-bar-bg" id="bs-example-navbar-collapse-1">
-		                    <?php 
-							$arg = array( 
-									'theme_location' 	=> 'top',
-									'container' 		=> '',
-									'items_wrap' 		=> '<ul id="%1$s" class="%2$s">%3$s</ul>',
-									'menu_class'     	=> 'nav navbar-nav',
-                					'fallback_cb'    	=> 'WP_Bootstrap_Navwalker::fallback',
-                					'walker'            => new WP_Bootstrap_Navwalker()
-								);
-							wp_nav_menu( $arg ); ?>
-							
-							<div class="hd-mediaicons pull-right">
-								<ul class="inline-items">
-									<li><a class="icon fb" href="#"><img src="<?php echo $template_url; ?>/assets/images/icon-fb.png" alt=""></a></li>
+						<div class="top-section">
+							<div class="show-top-header">						
+									<span class="glyphicon glyphicon-earphone"></span>
+								    <span>(561) 237-4247</span>
+								    <span class="toggle-area dropdown-toggle " data-toggle="dropdown">
+								    	<span class="caret"></span>
+								    	<span class="sr-only">Menu</span>
+								    </span>
+								<ul class="dropdown-menu">
+								    <li><a href="#">Fax: (561) 237-4248</a></li>
+								    <li><a href="#">Email: info@sos-safety.com</a></li>
+								    <li role="presentation" class="divider"></li>
+								    <li><a href="#">Contact us</a></li>
 								</ul>
 							</div>
-							
-						</div><!-- /.navbar-collapse -->
-						
+						</div>
+						<div class="top-section">
+							<div class="show-top-header">
+								<span class="glyphicon glyphicon-globe"></span>
+								<span>About us</span>
+								<span class="toggle-area dropdown-toggle " data-toggle="dropdown">
+									<span class="caret"></span>
+									<span class="sr-only">Menu</span>
+								</span>
+								<ul class="dropdown-menu">
+								    <li><a href="#">Location</a></li>
+								    <li><a href="#">News</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="top-section">
+							<div class="show-top-header main-color first-top-section">
+							<span class="glyphicon glyphicon-fire"></span>
+							<span>Advanced Protection</span>
+							</div>
+						</div>
 					</div>
-					
-				</div><!-- hd-inner -->
+				</div>
 			</div>
-		</div><!-- /.container -->
+			
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-3 logobg">
+					<?php 					
+					if ( function_exists( 'the_custom_logo' ) ) {
+						the_custom_logo();
+					} ?>
+				</div>
+				<div class="col-xs-6">
+					<div id="custom-search-input" class="yith-ajaxsearchform-container">
+						<form class="navbar-form" id="yith-ajaxsearchform" action="<?php echo get_bloginfo('url'); ?>" role="search">
+							<div class="input-group col-md-12">
+								<input type="text" id="yith-s" name="s" data-min-chars="3" data-loader-icon="" autocomplete="off" class="form-control input-lg yith-s" placeholder="<?php _e('Search', 'sos'); ?>" />
+								<span class="input-group-btn">
+								    <button class="btn btn-info btn-lg" id="yith-searchsubmit" type="submit">
+								        <i class="glyphicon glyphicon-search"></i>
+								    </button>
+								</span>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="col-xs-3">
+					<div class="cart-block">
+						<div class="half-cart">						
+							<div class="quarter-cart">
+								<span class="number">0</span>
+							</div>
+							<div class="quarter-cart">
+								<span class="cart-name">Cart</span>
+							</div>
+						</div>
+						<div class="half-cart">
+							<span class="glyphicon glyphicon-shopping-cart"></span>
+						</div>
+					</div>
+					<div class="user-account">
+						<div class="half-cart">						
+							<div class="quarter-cart">
+								<span class="user-up">Sing up</span>
+							</div>
+							<div class="quarter-cart">
+								<span class="user-in">Sing in</span>
+							</div>
+						</div>
+						<div class="half-cart">
+							<span class="glyphicon glyphicon-user"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<nav id="navbar-main">
+		<div class="navbar" role="navigation">
+         <!-- Brand and toggle get grouped for better mobile display -->
+			<div class="container">
+				<div class="row">  
+					<div class="hd-inner">
+						<div class="col-xs-12">
+							<div class="nav-header-menu">
+			                    <?php 
+									wp_nav_menu( 
+										array( 'theme_location' 	=> 'top') 
+									); 
+								?>
+							</div>
+						</div>
+					</div><!-- hd-inner -->
+				</div>
+			</div><!-- /.container -->
+		</div>
 	</nav>
 	<?php
 	if(!is_front_page() && !is_product()) {
