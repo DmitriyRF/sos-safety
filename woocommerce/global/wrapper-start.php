@@ -22,11 +22,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $template = get_option( 'template' );
 
-switch ( $template ) {
-	case 'sos' :
+if($template == 'sos'){
+
+	if( is_product() ){
+		echo '<div id="primary" role="main" class="col-xs-12">';
+	}else{
 		echo '<div id="primary" role="main" class="col-xs-12 col-sm-8 col-md-9">';
-		break;
-	default :
-		echo '<div id="container"><div id="content" role="main">';
-		break;
+	}
+}else{
+	echo '<div id="container"><div id="content" role="main">';
 }

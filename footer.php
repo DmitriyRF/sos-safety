@@ -1,4 +1,7 @@
 
+<?php 
+	echo is_product() ? '</div></div></div>' : '</div></div>' 
+?>
 	</div>
 </div>
 <footer>

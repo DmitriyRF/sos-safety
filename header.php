@@ -33,6 +33,20 @@
 								<script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 								
 							</div>
+						</div>						
+						<div class="top-section">
+							<div class="show-top-header">
+								<span class="glyphicon glyphicon-globe"></span>
+								<span>About us</span>
+								<span class="toggle-area dropdown-toggle " data-toggle="dropdown">
+									<span class="caret"></span>
+									<span class="sr-only">Menu</span>
+								</span>
+								<ul class="dropdown-menu">
+								    <li><a href="#">Location</a></li>
+								    <li><a href="#">News</a></li>
+								</ul>
+							</div>
 						</div>
 						<div class="top-section">
 							<div class="show-top-header">						
@@ -48,20 +62,6 @@
 								    <li role="presentation" class="divider"></li>
 								    <li><a href="#">Contact us</a></li>
 								    <li><a href="#">Information Request</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="top-section">
-							<div class="show-top-header">
-								<span class="glyphicon glyphicon-globe"></span>
-								<span>About us</span>
-								<span class="toggle-area dropdown-toggle " data-toggle="dropdown">
-									<span class="caret"></span>
-									<span class="sr-only">Menu</span>
-								</span>
-								<ul class="dropdown-menu">
-								    <li><a href="#">Location</a></li>
-								    <li><a href="#">News</a></li>
 								</ul>
 							</div>
 						</div>
@@ -99,10 +99,12 @@
 				</div>
 				<div class="col-xs-3">
 					<div class="cart-block">
-						<a class="no-link-style" href="<?php echo get_site_url() . '/cart'; ?>">
+						<a class="no-link-style" href="<?php echo wc_get_cart_url(); ?>">
 							<div class="half-block">						
 								<div class="quarter-cart">
-									<span class="number">0</span>
+									<span class="number">
+										<?php echo WC()->cart->get_cart_contents_count(); ?>
+									</span>
 								</div>
 								<div class="quarter-cart">
 									<span class="cart-name">Cart</span>
@@ -173,6 +175,9 @@
 	 		<?php
 	// 	}
 	// }
+	?> 
+	<?php 
+		echo is_product() ? '<div class="bg-grey"><div class="container inner-edge-shadow"><div class="row">' : '<div class="container"><div class="row">';
 	?>
-	<div class="container">
-		<div class="row">
+	
+		

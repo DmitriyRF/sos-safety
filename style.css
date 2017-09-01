@@ -459,10 +459,10 @@ h2.woocommerce-loop-product__title {
 .woocommerce h2 {
     text-align: center;
     font-size: 15px !important;
-    color:#000;
+    color:#4F4F4F;
     text-transform: capitalize;
     // border-top:1px solid #aaa;
-    padding:5px 5px;
+    padding:10px 5px 5px;
     font-weight: bold;
 }
 .woocommerce p {
@@ -522,9 +522,10 @@ ul.products li a.button {
     border:1px solid #ddd;
     background: #fff;
 }
-body.single-product .summary.entry-summary p {
+body.single-product .summary.entry-summary p.price {
     margin: 0px 0px 10px 0px;
-    font-size: 15px;
+    font-size: 25px;
+    display: inline;
     font-weight:normal;    
 }
 body.single-product .summary.entry-summary input.wpi-button{
@@ -555,7 +556,8 @@ body.single-product .summary.entry-summary input.wpi-button:hover{
     padding: 0px 0px;
     font-weight: 600;
     letter-spacing: 1px;
-    display: none;    
+    font-size: 1.2em;
+    // display: none;    
 }
 .related.products ul li h2 {
     font-weight: 400;
@@ -711,7 +713,7 @@ body .ui-dialog {
     display: none !important;
 }
 .images > .wpis-slider-for {
-    border: 1px solid #ddd;
+    border-botton: 1px solid #ddd;
     margin-bottom: 10px;
 }
 .pdf-catalog {
@@ -831,7 +833,7 @@ input.wpi-button {
     width:28%;
 }
 .related.products ul.products {
-    margin-top: 30px;
+    // margin-top: 30px;
 }
 .yith-wcbr-brands {
     font-weight: 600;
@@ -1487,6 +1489,5 @@ span.cross-btn {
 .plvr-slider .slider-caption .slider-btn {padding:2px 0px; margin:4px 8px;}
 .slider-caption span.product-count {display:none !important;}
 .images .slick-track.flex-control-nav { width:auto !important;}
-.woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary {width:62%;}
 .woocommerce div.product div.summary {margin-bottom: 0px;}
 .single-product .page-header h1 {font-size:26px;}
