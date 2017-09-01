@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php $template_url = get_bloginfo('template_url'); ?>
-<!--- Hero image slider ----->   
+<!--- Hero image slider -->   
 <?php 
 $args = array(
 	'posts_per_page'   => -1,

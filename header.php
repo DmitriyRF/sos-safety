@@ -47,6 +47,7 @@
 								    <li><a href="#">Email: info@sos-safety.com</a></li>
 								    <li role="presentation" class="divider"></li>
 								    <li><a href="#">Contact us</a></li>
+								    <li><a href="#">Information Request</a></li>
 								</ul>
 							</div>
 						</div>
@@ -73,7 +74,6 @@
 					</div>
 				</div>
 			</div>
-			
 		</div>
 		<div class="container">
 			<div class="row">
@@ -99,30 +99,34 @@
 				</div>
 				<div class="col-xs-3">
 					<div class="cart-block">
-						<div class="half-cart">						
-							<div class="quarter-cart">
-								<span class="number">0</span>
+						<a class="no-link-style" href="<?php echo get_site_url() . '/cart'; ?>">
+							<div class="half-block">						
+								<div class="quarter-cart">
+									<span class="number">0</span>
+								</div>
+								<div class="quarter-cart">
+									<span class="cart-name">Cart</span>
+								</div>
 							</div>
-							<div class="quarter-cart">
-								<span class="cart-name">Cart</span>
+							<div class="half-block">
+								<span class="glyphicon glyphicon-shopping-cart"></span>
 							</div>
-						</div>
-						<div class="half-cart">
-							<span class="glyphicon glyphicon-shopping-cart"></span>
-						</div>
+						</a>
 					</div>
 					<div class="user-account">
-						<div class="half-cart">						
-							<div class="quarter-cart">
-								<span class="user-up">Sing up</span>
+						<a class="no-link-style" href="<?php echo get_site_url() . '/my-account'; ?>">
+							<div class="half-block">						
+								<!-- <div class="quarter-cart"> -->
+									<!-- <span class="user-up">Sing up</span> -->
+								<!-- </div> -->
+								<!-- <div class="quarter-cart"> -->
+										<span class="user-in">Sing in</span>
+								<!-- </div> -->
 							</div>
-							<div class="quarter-cart">
-								<span class="user-in">Sing in</span>
+							<div class="half-block">
+								<span class="glyphicon glyphicon-user"></span>
 							</div>
-						</div>
-						<div class="half-cart">
-							<span class="glyphicon glyphicon-user"></span>
-						</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -149,23 +153,26 @@
 		</div>
 	</nav>
 	<?php
-	if(!is_front_page() && !is_product()) {
-		if(is_shop() || is_archive()){
-			$page_id = wc_get_page_id('shop'); 
-		}else{
-			$page_id = get_the_ID();
-		}
-		$featured_img_url = get_the_post_thumbnail_url($page_id, 'full'); 	
-		if(!$featured_img_url) {
-			$featured_img_url = $template_url.'/assets/images/products.png';
-		}
-		if(!is_product_category()) {
-			?>
-			<div class="container">
-				<div class="head-img">
-					<img class="img-responsive" src="<?php echo $featured_img_url; ?>" />
-				</div>
-			</div>
-			<?php
-		}
-	}
+	// if(!is_front_page() && !is_product()) {
+	// 	if(is_shop() || is_archive()){
+	// 		$page_id = wc_get_page_id('shop'); 
+	// 	}else{
+	// 		$page_id = get_the_ID();
+	// 	}
+	// 	$featured_img_url = get_the_post_thumbnail_url($page_id, 'full'); 	
+	// 	if(!$featured_img_url) {
+	// 		$featured_img_url = $template_url.'/assets/images/products.png';
+	// 	}
+	// 	if(!is_product_category()) {
+	// 		?>
+	<!-- 	 <div class="container">
+	 			<div class="head-img">
+					<img class="img-responsive" src="<?php// echo $featured_img_url; ?>" />
+	 			</div>
+			</div> -->
+	 		<?php
+	// 	}
+	// }
+	?>
+	<div class="container">
+		<div class="row">

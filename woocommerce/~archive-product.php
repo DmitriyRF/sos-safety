@@ -54,9 +54,9 @@ get_header( 'shop' ); ?>
     </header>
 
 		<?php if ( have_posts() ) : ?>
-			<ul class="products product-cats">
-				<?php woocommerce_product_subcategories(); ?>
-			</ul>
+ 			<ul class="products product-cats">
+			<?php woocommerce_product_subcategories(); ?>
+			</ul> 
             <div class="before-shop-head">
                 <?php
                     /**

@@ -1,20 +1,19 @@
 <?php get_header(); ?>
 
 	<div class="container">	
-        <header class="page-header">
-            <?php if ( is_home() && ! is_front_page() ) : ?>
-                <h1 class="page-title"><?php single_post_title(); ?></h1>
-            <?php else : ?>
-                <h2 class="page-title"><?php _e( 'Posts', 'sos' ); ?></h2>
-            <?php endif; ?>
-        </header>
-
+        <div class="page-header row">
+            <div class="col-xs-12">
+                <?php if ( is_home() && ! is_front_page() ) : ?>
+                    <h1 class="page-title"><?php single_post_title(); ?></h1>
+                <?php else : ?>
+                    <h2 class="page-title"><?php _e( 'Posts', 'sos' ); ?></h2>
+                <?php endif; ?>
+            </div>
+        </div>
         <div id="primary" class="content-area">
             <main id="main" class="site-main" role="main">
-
                 <?php
                 if ( have_posts() ) :
-
                     /* Start the Loop */
                     while ( have_posts() ) : the_post();
                     ?>

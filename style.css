@@ -13,7 +13,7 @@ html, body {
 	font-family: Arial,Helvetica,sans-serif;
 	font-size: 14px;
     font-weight:400;
-    background: #cecece url("assets/images/bg-trans-img.jpg") repeat-y scroll 50% 0; 
+    // background: #cecece url("assets/images/bg-trans-img.jpg") repeat-y scroll 50% 0; 
 }
 
 a, a:hover, a:focus {
@@ -30,12 +30,12 @@ b, strong {
 }
 
 .watermark {
-    background:rgba(0, 0, 0, 0) url("assets/images/watermark.png") no-repeat scroll 20% 0;
+    // background:rgba(0, 0, 0, 0) url("assets/images/watermark.png") no-repeat scroll 20% 0;
     // padding-top:255px;
 }
 
 .home .watermark {
-    padding-top:138px;
+    // padding-top:138px;
 }
 .hero-slider .carousel {
     max-width: 1170px;
@@ -262,8 +262,8 @@ a.goog-logo-link {
 
 .head-img {
     position: absolute;
-    right: 15px;
-    top: -114px;
+    right: 0px;
+    top: -20px;
 }
 
 /**************************/
@@ -400,8 +400,10 @@ img {
     box-shadow: none;
       font-size: 17px;
       height: 50px;
-    border: solid 1px #E4E4E4;
-    border-radius: 2px;
+    border-left: solid 1px #666666;
+    border-top: solid 1px #666666;
+    border-bottom: solid 1px #666666;    
+    border-radius: 0px;
 }
 
 #custom-search-input button{
@@ -459,8 +461,8 @@ h2.woocommerce-loop-product__title {
     font-size: 15px !important;
     color:#000;
     text-transform: capitalize;
-    border-top:1px solid #aaa;
-    padding:0px 5px;
+    // border-top:1px solid #aaa;
+    padding:5px 5px;
     font-weight: bold;
 }
 .woocommerce p {
@@ -475,8 +477,8 @@ h2.woocommerce-loop-product__title {
     border-top:none;
 }
 .woocommerce ul.products li.product {
-   margin-bottom: 20px;
-   border:1px solid #aaa;
+   // margin-bottom: 20px;
+   // border:1px solid #aaa;
 }
 
 ul.products.product-cats {
@@ -875,9 +877,10 @@ ul.product-categories li a {
 
 .wbm_category_banner_image {
     position: absolute;
-    right: 15px;
-    top: -116px;
+    right: 20px;
+    top: -18px;
     width: auto;
+    max-height: 110px;
 }
 
 
@@ -1236,18 +1239,18 @@ span.cross-btn {
     }    
     
 .caret::after {
-    color: #fff;
+    /* color: #fff; */
     content: "▼";
     display: inline-block;
-    font-size: 20px;    
-    right:0px;
+    font-size: 15px;
+    /* right: 0px; */
     vertical-align: middle;
-    position:absolute;
-    right:0;
-    border:none !important;    
-    padding:10px;
-    top:0;
-    background: #666;
+    position: absolute;
+    right: 0;
+    border: none !important;
+    padding: 3px;
+    top: 0;
+    /* background: #666; */
     }      
 .dropdown-menu {
     position: relative;
