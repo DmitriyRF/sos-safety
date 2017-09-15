@@ -42,7 +42,7 @@ header
         }
         .top-section
         {
-            font-size: 13px;
+            font-size: 14px;
             line-height: 30px;
 
             position: relative;
@@ -82,9 +82,13 @@ header
     }
     .logobg a img
     {
+        position: absolute;
+        top: -20px;
+        left: 30px;
+
         width: 100%;
-        max-width: 70px;
-        margin: 5px auto;
+        max-width: 135px;
+        margin: 0;
     }
     .glyphicon
     {
@@ -159,9 +163,10 @@ nav
 
     min-width: 40px;
     height: 25px;
-    .number
+    .header-cart-count
     {
         display: block;
+
 
         color: white;
         border-top-left-radius: 30% 50%;
@@ -284,7 +289,7 @@ h3
 
     height: 28px;
     min-height: 28px;
-    margin: 10px 0 10px;
+    margin: 5px 0 5px;
     padding: 0;
 }
 .woocommerce ul.products li.product .button
@@ -369,7 +374,7 @@ h3
 
     display: block;
 
-    margin-bottom: .5em;
+    margin-bottom: 0em;
 
     text-align: center;
 
@@ -402,9 +407,10 @@ h3
 }
 #secondary
 {
-    margin-top: 80px;
-
-    border-left: 1px solid #999;
+    margin-top: 40px;
+    @media screen and (min-width: 768px) {
+        border-right: 1px solid #999;
+    }
 }
 
 //Product page
@@ -476,6 +482,7 @@ h3
 
     width: 100%;
     margin-bottom: 15px;
+    padding: 6px 0px;
 
     border-bottom: 1px solid #c11b21;
 }
@@ -627,4 +634,24 @@ h3
 {
     color: #fff;
     background-color: #c11b21;
+}
+
+.goog-te-combo,
+.goog-te-banner *,
+.goog-te-ftab *,
+.goog-te-menu *,
+.goog-te-menu2 *,
+.goog-te-balloon *
+{
+    font-size: 14px!important;
+}
+
+.woocommerce ul.products li.product .star-rating {
+  font-size: 1.2em;
+  color: #F7941D;
+}
+.woocommerce .products .star-rating {
+  display: block;
+  margin: 0 auto;
+  float: none;
 }

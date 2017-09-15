@@ -15,6 +15,6 @@ if ( ! is_active_sidebar( 'shop-sidebar' ) ) {
 }
 ?>
 
-<aside id="secondary" class="col-xs-12 col-sm-4 col-md-3" role="complementary">
+<aside id="secondary" class="col-xs-12 col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9" role="complementary">
 	<?php dynamic_sidebar( 'shop-sidebar' ); ?>
 </aside><!-- #secondary -->

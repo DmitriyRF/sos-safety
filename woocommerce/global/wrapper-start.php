@@ -27,7 +27,7 @@ if($template == 'sos'){
 	if( is_product() ){
 		echo '<div id="primary" role="main" class="col-xs-12">';
 	}else{
-		echo '<div id="primary" role="main" class="col-xs-12 col-sm-8 col-md-9">';
+		echo '<div id="primary" role="main" class="col-xs-12 col-sm-8 col-sm-push-4 col-md-9 col-md-push-3">';
 	}
 }else{
 	echo '<div id="container"><div id="content" role="main">';

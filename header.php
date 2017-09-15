@@ -57,7 +57,7 @@
 								    	<span class="sr-only">Menu</span>
 								    </span>
 								<ul class="dropdown-menu">
-								    <li><a href="#">Fax: (561) 237-4248</a></li>
+								    <!-- <li><a href="#">Fax: (561) 237-4248</a></li> -->
 								    <li><a href="#">Email: info@sos-safety.com</a></li>
 								    <li role="presentation" class="divider"></li>
 								    <li><a href="#">Contact us</a></li>
@@ -99,10 +99,10 @@
 				</div>
 				<div class="col-xs-3">
 					<div class="cart-block">
-						<a class="no-link-style" href="<?php echo wc_get_cart_url(); ?>">
+						<a class="no-link-style" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e('My Cart',''); ?>" >
 							<div class="half-block">						
 								<div class="quarter-cart">
-									<span class="number">
+									<span class="header-cart-count">
 										<?php echo WC()->cart->get_cart_contents_count(); ?>
 									</span>
 								</div>
@@ -116,13 +116,24 @@
 						</a>
 					</div>
 					<div class="user-account">
-						<a class="no-link-style" href="<?php echo get_site_url() . '/my-account'; ?>">
+					<a class="no-link-style" href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account',''); ?>">
+						<!-- <a  href="<?php// echo get_site_url() . '/my-account'; ?>"> -->
 							<div class="half-block">						
 								<!-- <div class="quarter-cart"> -->
 									<!-- <span class="user-up">Sing up</span> -->
 								<!-- </div> -->
 								<!-- <div class="quarter-cart"> -->
-										<span class="user-in">Sing in</span>
+							<span class="user-in">
+							<?php 
+								if ( is_user_logged_in()) {
+									$user = wp_get_current_user();
+									echo $user->display_name;
+								}else{
+									echo 'Sing in';
+								}
+							?>
+							
+							</span>
 								<!-- </div> -->
 							</div>
 							<div class="half-block">

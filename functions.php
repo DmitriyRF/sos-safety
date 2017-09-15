@@ -70,3 +70,14 @@ function woocommerce_template_close_single_price_tag(){
 		echo '</div>';
 	}
 
+// Update Cart Count After AJAX
+add_filter( 'woocommerce_add_to_cart_fragments', 'iconic_cart_count_fragments', 10, 1 );
+
+function iconic_cart_count_fragments( $fragments ) {
+    
+    $fragments['span.header-cart-count'] = '<span class="header-cart-count">' . WC()->cart->get_cart_contents_count() . '</span>';
+    
+    return $fragments;
+    
+}
+

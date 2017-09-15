@@ -17,6 +17,7 @@ function sos_setup() {
 	register_nav_menus( array(
 		'top'    => __( 'Main Menu', 'sos' ),
 		'footer' => __( 'Footer Menu', 'sos' ),
+		'company' => __( 'Top Company Menu', 'sos' ),
 	) );
 
 	// Add theme support for Custom Logo.

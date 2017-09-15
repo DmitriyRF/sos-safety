@@ -17,7 +17,7 @@ header .header-top:last-child {
   border: none;
 }
 header .header-top .top-section {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 30px;
   position: relative;
   display: inline-block;
@@ -44,9 +44,12 @@ header .header-top .top-section .first-top-section {
   border-left: 1px solid #eee;
 }
 header .logobg a img {
+  position: absolute;
+  top: -20px;
+  left: 30px;
   width: 100%;
-  max-width: 70px;
-  margin: 5px auto;
+  max-width: 135px;
+  margin: 0;
 }
 header .glyphicon {
   font-size: 15px;
@@ -99,7 +102,7 @@ nav .navbar {
   min-width: 40px;
   height: 25px;
 }
-.quarter-cart .number {
+.quarter-cart .header-cart-count {
   display: block;
   color: white;
   border-top-left-radius: 30% 50%;
@@ -190,7 +193,7 @@ h3 {
   overflow: hidden;
   height: 28px;
   min-height: 28px;
-  margin: 10px 0 10px;
+  margin: 5px 0 5px;
   padding: 0;
 }
 .woocommerce ul.products li.product .button {
@@ -235,7 +238,7 @@ h3 {
   font-size: 1.2em;
   font-weight: 700;
   display: block;
-  margin-bottom: .5em;
+  margin-bottom: 0em;
   text-align: center;
   color: #c11b21;
 }
@@ -256,8 +259,12 @@ h3 {
   border-top: 1px solid #999;
 }
 #secondary {
-  margin-top: 80px;
-  border-left: 1px solid #999;
+  margin-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  #secondary {
+    border-right: 1px solid #999;
+  }
 }
 .woocommerce div.product div.images,
 .woocommerce-page div.product div.images {
@@ -315,6 +322,7 @@ h3 {
   display: block;
   width: 100%;
   margin-bottom: 15px;
+  padding: 6px 0px;
   border-bottom: 1px solid #c11b21;
 }
 .woocommerce div.product form.cart div.quantity {
@@ -419,4 +427,21 @@ h3 {
 .woocommerce input.button.alt:hover {
   color: #fff;
   background-color: #c11b21;
+}
+.goog-te-combo,
+.goog-te-banner *,
+.goog-te-ftab *,
+.goog-te-menu *,
+.goog-te-menu2 *,
+.goog-te-balloon * {
+  font-size: 14px!important;
+}
+.woocommerce ul.products li.product .star-rating {
+  font-size: 1.2em;
+  color: #F7941D;
+}
+.woocommerce .products .star-rating {
+  display: block;
+  margin: 0 auto;
+  float: none;
 }
