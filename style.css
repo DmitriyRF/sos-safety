@@ -629,9 +629,12 @@ body.single-product .summary.entry-summary input.wpi-button:hover{
     bottom: -6px;
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs li a {
-    font-size: 17px;
+    font-size: 15px;
     letter-spacing: 1px;
     padding:5px 0px;
+}
+.woocommerce div.product .woocommerce-tabs.wc-tabs-wrapper {
+  padding-top: 20px;
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs li a:active {
     color: #fff;

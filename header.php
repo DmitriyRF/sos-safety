@@ -33,42 +33,47 @@
 								<script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 								
 							</div>
-						</div>						
+						</div>
 						<div class="top-section">
 							<div class="show-top-header">
 								<span class="glyphicon glyphicon-globe"></span>
-								<span>About us</span>
+								<span><a href="<?php echo esc_url( get_permalink(11) ); ?>">About us</a></span>
 								<span class="toggle-area dropdown-toggle " data-toggle="dropdown">
 									<span class="caret"></span>
 									<span class="sr-only">Menu</span>
 								</span>
 								<ul class="dropdown-menu">
-								    <li><a href="#">Location</a></li>
-								    <li><a href="#">News</a></li>
+								    <li><a href="<?php echo esc_url( get_permalink(15) ); ?>">Location</a></li>
+								    <li><a href="<?php echo esc_url( get_permalink(13) ); ?>">News</a></li>
 								</ul>
 							</div>
 						</div>
 						<div class="top-section">
 							<div class="show-top-header">						
 									<span class="glyphicon glyphicon-earphone"></span>
-								    <span>(561) 237-4247</span>
+								    <span><a href="tel:+15612374247">(561) 237-4247</a></span>
 								    <span class="toggle-area dropdown-toggle " data-toggle="dropdown">
 								    	<span class="caret"></span>
 								    	<span class="sr-only">Menu</span>
 								    </span>
 								<ul class="dropdown-menu">
 								    <!-- <li><a href="#">Fax: (561) 237-4248</a></li> -->
-								    <li><a href="#">Email: info@sos-safety.com</a></li>
+								    <li><a href="mailto:info@sos-safety.com">
+								    	<span class="glyphicon glyphicon-envelope"></span>
+								    	 info@sos-safety.com</a>
+								    </li>
 								    <li role="presentation" class="divider"></li>
-								    <li><a href="#">Contact us</a></li>
-								    <li><a href="#">Information Request</a></li>
+								    <li><a href="<?php echo esc_url( get_permalink(17) ); ?>">Contact us</a></li>
+								    <li><a href="<?php echo esc_url( get_permalink(142) ); ?>">Information Request</a></li>
 								</ul>
 							</div>
 						</div>
 						<div class="top-section">
 							<div class="show-top-header main-color first-top-section">
-							<span class="glyphicon glyphicon-fire"></span>
-							<span>Advanced Protection</span>
+							<a href="<?php echo esc_url( get_permalink(1) ); ?>">
+								<span class="glyphicon glyphicon-fire"></span>
+								<span>Advanced Protection</span>
+							</a>
 							</div>
 						</div>
 					</div>
@@ -137,7 +142,12 @@
 								<!-- </div> -->
 							</div>
 							<div class="half-block">
-								<span class="glyphicon glyphicon-user"></span>
+								<?php $user = wp_get_current_user(); ?>
+								<?php if ( $user ) {?>
+								    <img src="<?php echo esc_url( get_avatar_url( $user->ID ) ); ?>" class="header-user-icon" />
+								<?php } else { ?>
+									<span class="glyphicon glyphicon-user"></span>
+								<?php } ?>
 							</div>
 						</a>
 					</div>

@@ -47,10 +47,12 @@ function woocommerce_get_product_thumbnail(
 add_action( 'woocommerce_before_shop_loop_item', 
 		'woocommerce_template_add_div_before_product_loop_create', 5 );
 function woocommerce_template_add_div_before_product_loop_create(){	echo '<div class="item">';}
+add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_add_div_before_add_to_cart_button', 5 );
+function woocommerce_template_add_div_before_add_to_cart_button(){ echo '<div class="button-cart-wrapper">'; }
 
 add_action( 'woocommerce_after_shop_loop_item', 
 		'woocommerce_template_add_div_after_product_loop_create', 15 );
-function woocommerce_template_add_div_after_product_loop_create(){	echo '</div>';}
+function woocommerce_template_add_div_after_product_loop_create(){	echo '</div></div>';}
 
 // Remove Sidebar on all the Single Product Pages
 add_action( 'wp', 'sos_remove_sidebar_product_pages' );
@@ -61,14 +63,14 @@ function sos_remove_sidebar_product_pages() {
 }
 
 
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_modify_single_price', 5 );
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_close_single_price_tag', 15 );
-function woocommerce_template_modify_single_price(){
-		echo '<div class="price-wrapper" ><span class="label-price">Price: </span>';
-	}
-function woocommerce_template_close_single_price_tag(){
-		echo '</div>';
-	}
+// add_action( 'woocommerce_single_product_summary', 'woocommerce_template_modify_single_price', 5 );
+// add_action( 'woocommerce_single_product_summary', 'woocommerce_template_close_single_price_tag', 15 );
+// function woocommerce_template_modify_single_price(){
+// 		echo '<div class="price-wrapper" ><span class="label-price">Price: </span>';
+// 	}
+// function woocommerce_template_close_single_price_tag(){
+// 		echo '</div>';
+// 	}
 
 // Update Cart Count After AJAX
 add_filter( 'woocommerce_add_to_cart_fragments', 'iconic_cart_count_fragments', 10, 1 );
