@@ -142,9 +142,8 @@
 								<!-- </div> -->
 							</div>
 							<div class="half-block">
-								<?php $user = wp_get_current_user(); ?>
-								<?php if ( $user ) {?>
-								    <img src="<?php echo esc_url( get_avatar_url( $user->ID ) ); ?>" class="header-user-icon" />
+								<?php if ( is_user_logged_in()){ ?>
+								    <img class="header-user-icon" src="<?php echo esc_url( get_avatar_url( $user->ID ) ); ?>"  />
 								<?php } else { ?>
 									<span class="glyphicon glyphicon-user"></span>
 								<?php } ?>

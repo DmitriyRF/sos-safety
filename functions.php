@@ -83,3 +83,11 @@ function iconic_cart_count_fragments( $fragments ) {
     
 }
 
+//Register the taxonomy for menus
+// apply_filters('woocommerce_attribute_show_in_nav_menus', false, $name);
+// add_filter('woocommerce_attribute_show_in_nav_menus', 'wc_reg_for_menus', 1, 2);
+
+// function wc_reg_for_menus( $register, $name = '' ) {
+//      if ( $name == 'pa_size' ) $register = true;
+//      return $register;
+// }

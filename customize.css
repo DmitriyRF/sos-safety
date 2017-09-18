@@ -280,12 +280,12 @@ h3 {
 .woocommerce div.product div.images,
 .woocommerce-page div.product div.images {
   float: left;
-  width: 48%;
+  width: 40%;
   margin: 0 27px;
 }
 .woocommerce div.product div.summary,
 .woocommerce-page div.product div.summary {
-  width: 48%;
+  width: 55%;
   margin: 0 -27px;
   padding: 0 30px;
   border-left: 1px solid #eee;
@@ -332,7 +332,7 @@ h3 {
 .woocommerce nav.woocommerce-breadcrumb {
   display: block;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 22px;
   padding: 6px 0;
   border-bottom: 1px solid #c11b21;
 }
@@ -603,8 +603,29 @@ div.button-cart-wrapper {
   float: left;
   clear: none;
 }
-.woocommerce img.header-user-icon {
+.woocommerce img.header-user-icon,
+img.header-user-icon {
   max-height: 36px;
   max-width: 36px;
   margin: 7px auto;
+}
+.categorydiv div.tabs-panel,
+.customlinkdiv div.tabs-panel,
+.posttypediv div.tabs-panel,
+.taxonomydiv div.tabs-panel,
+.wp-tab-panel {
+  max-height: 350px;
+}
+div#mega-menu-wrap-primary .right-top-mega-menu-image {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+div#mega-menu-wrap-primary .left-top-mega-menu-image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+:focus {
+  outline: transparent auto 5px;
 }
