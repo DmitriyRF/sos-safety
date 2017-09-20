@@ -23,10 +23,10 @@ add_action( 'save_post', 'sos_meta_box_save' );
 // filters
 add_filter( 'nav_menu_link_attributes', 'sos_header_menu_add_class', 10, 3 );//Add page scroll for anchor tag- navigation
 
-// require_once('wp-bootstrap-navwalker.php');
+require_once('wp-bootstrap-navwalker.php');
 
 
-// include(get_template_directory() . '/includes/woocommerce_customization.php');
+include(get_template_directory() . '/includes/woocommerce_customization.php');
 
 
 // Customize products page grid through add <div>
