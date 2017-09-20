@@ -17,14 +17,25 @@ if(!empty($slider)) { ?>
           	$k=0;
           	foreach($slider as $slide) { 
           		 $slide_url = get_post_meta($slide->ID, 'slide_url', true);
+               $yvideo_id = trim(get_post_meta($slide->ID, 'yvideo_id', true));
           		?>
-		        <div class="item <?php echo (($k==0)?'active':''); ?>">
-		           <div class="fill" style="background-image:url('<?php echo get_the_post_thumbnail_url($slide, 'full'); ?>');"></div>
-		           <div class="carousel-caption">
-		              <h2><?php echo $slide->post_title; ?></h2>
-		              <p><?php echo $slide->post_excerpt; ?></p>
-		              <a href="<?php echo $slide_url; ?>" class="btn orgbtn"><?php _e('Learn More', 'sos'); ?></a>
-		           </div>
+        		    <div class="item <?php echo (($k==0)?'active':''); ?>">
+                  <?php if(empty($yvideo_id)) { ?>
+                    <div class="fill" style="background-image:url('<?php echo get_the_post_thumbnail_url($slide, 'full'); ?>');"></div>
+                  <?php } ?>
+                    <div class="carousel-caption<?php echo ((!empty($yvideo_id))?' ivideo-text':''); ?>">
+                      <?php if(!empty($yvideo_id)) { ?>
+                        <h2><img src="<?php echo get_the_post_thumbnail_url($slide, 'full'); ?>" alt="<?php echo $slide->post_title; ?>"></h2>
+                      <?php } else { ?>
+                        <h2><?php echo $slide->post_title; ?></h2>
+                      <?php } ?>
+                        <p><?php echo $slide->post_excerpt; ?></p>
+                        <a href="<?php echo $slide_url; ?>" class="btn orgbtn"><?php _e('Learn More', 'sos'); ?></a>
+                    </div>
+                     <?php if(!empty($yvideo_id)) { ?>
+                        <span class="play-video"></span>
+                      <div class="ivideo"><iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $yvideo_id; ?>" frameborder="0"></iframe></div>
+                    <?php } ?>
 		        </div>
             <?php $k++; } ?>
          </div>
