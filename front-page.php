@@ -39,9 +39,8 @@ if(!empty($slider)) { ?>
       </header>
     </div>    
 <?php } ?>       
-<!--- Hero image slider end ----->       
-        
-<!--- Categories slider start     --->       
+<!-- Hero image slider end -->       
+<!-- Categories slider start -->       
 <div class="categories-slider">         
 	<section class="categories-sec">
 		<div class="container">
@@ -52,9 +51,8 @@ if(!empty($slider)) { ?>
 		</div>
 	</section>
 </div> 
-<!---- Categories slider end --->
-
-<!---- Client Logo ------>
+<!-- Categories slider end -->
+<!-- Client Logo -->
 <?php 
 $args = array(
 	'posts_per_page'   => -1,
@@ -85,6 +83,6 @@ if(!empty($client_logo)) { ?>
 		</section>
 	</div>
 <?php } ?>
-<!---- Client Logo End ---->       
+<!-- Client Logo End -->       
         
 <?php get_footer(); ?>
