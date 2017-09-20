@@ -269,18 +269,19 @@ a.goog-logo-link {
 /**************************/
 
 .main-banner .carousel-control {
-	background: #c11b21 none repeat scroll 0 0;
-	bottom: auto;
-	height: 50px;
-	opacity: 1;
-	padding: 10px 0;
-	text-shadow: none;
-	top: 50%;
-	width: 50px;
-	z-index: 10;
-	transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
+    background: #e2e2e2 none repeat scroll 0 0;
+    bottom: auto;
+    height: 47px;
+    opacity: 1;
+    padding: 10px 0;
+    text-shadow: none;
+    top: 50%;
+    width: 48px;
+    z-index: 10;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    border-radius:10px;
 }
 
 .main-banner .carousel-caption {
@@ -353,6 +354,9 @@ img {
 .plvr-slider .slider-caption .slider-btn {
 	width:90%
 }
+.ivideo {position:absolute; right:7%; top:10%;}
+.play-video {position:absolute; right:7%; top:10%; width:560px; height:315px;z-index:9999; cursor:pointer;}
+
 /*********   Home Page Categories Slider End   ************/
 
 /*********   Home Page Client Logo   ************/
@@ -1399,7 +1403,9 @@ span.cross-btn {
         margin:0 auto;    
     }
     .woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary {width:100% !important;}
-
+        .ivideo {width:86%;}
+        .ivideo iframe {width: 100%;}
+        .ivideo-text {display:none;}
 }
 
 @media only screen and (min-width: 768px) {
@@ -1498,3 +1504,11 @@ span.cross-btn {
 // .images .slick-track.flex-control-nav { width:auto !important;}
 .woocommerce div.product div.summary {margin-bottom: 0px;}
 .single-product .page-header h1 {font-size:26px;}
+
+.carousel-inner > .item {
+    visibility: hidden; 
+}
+.carousel-inner > .item.active {
+     visibility: visible;
+     transition: visibility 1ms linear;
+}
