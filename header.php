@@ -134,7 +134,7 @@
 									$user = wp_get_current_user();
 									echo $user->display_name;
 								}else{
-									echo 'Sing in';
+									echo 'Sign in';
 								}
 							?>
 							

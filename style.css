@@ -1512,3 +1512,7 @@ span.cross-btn {
      visibility: visible;
      transition: visibility 1ms linear;
 }
+
+img.test{
+  height: 170px;
+}

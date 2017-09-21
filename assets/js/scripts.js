@@ -26,8 +26,19 @@ jQuery(function ($) {
 	
 	
 	$('#hero-carousel').carousel({
-		interval: false
+		interval: 4000
 	}); 
+	
+	$('.play-video').on('click', function (e) {
+		var $src= $(this).next().find('iframe')[0].src;
+		if($src.indexOf('autoplay=1') > -1) {
+			
+			$(this).next().find('iframe')[0].src = $src.split('?')[0]+"?autoplay=0";
+		} else {
+			$(this).next().find('iframe')[0].src = $src.split('?')[0]+"?autoplay=1";
+		}
+    	$("#hero-carousel").carousel('pause');
+	});
 	
 	$('#cat-carousel').carousel({
 		interval: 4000
