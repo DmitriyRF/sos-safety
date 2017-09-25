@@ -88,7 +88,7 @@
 						the_custom_logo();
 					} ?>
 				</div>
-				<div class="col-xs-7">
+				<div class="col-xs-6">
 					<div id="custom-search-input" class="yith-ajaxsearchform-container">
 						<form class="navbar-form" id="yith-ajaxsearchform" action="<?php echo get_bloginfo('url'); ?>" role="search">
 							<div class="input-group col-md-12">
@@ -100,6 +100,55 @@
 								</span>
 							</div>
 						</form>
+					</div>
+				</div>
+				<div class="col-xs-3">
+					<div class="cart-block">
+						<a class="no-link-style" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e('My Cart',''); ?>" >
+							<div class="half-block">						
+								<div class="quarter-cart">
+									<span class="header-cart-count">
+										<?php echo WC()->cart->get_cart_contents_count(); ?>
+									</span>
+								</div>
+								<div class="quarter-cart">
+									<span class="cart-name">Cart</span>
+								</div>
+							</div>
+							<div class="half-block">
+								<span class="glyphicon glyphicon-shopping-cart"></span>
+							</div>
+						</a>
+					</div>
+					<div class="user-account">
+					<a class="no-link-style" href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account',''); ?>">
+						<!-- <a  href="<?php// echo get_site_url() . '/my-account'; ?>"> -->
+							<div class="half-block">						
+								<!-- <div class="quarter-cart"> -->
+									<!-- <span class="user-up">Sing up</span> -->
+								<!-- </div> -->
+								<!-- <div class="quarter-cart"> -->
+							<span class="user-in">
+							<?php 
+								if ( is_user_logged_in()) {
+									$user = wp_get_current_user();
+									echo $user->display_name;
+								}else{
+									echo 'Sign in';
+								}
+							?>
+							
+							</span>
+								<!-- </div> -->
+							</div>
+							<div class="half-block">
+								<?php if ( is_user_logged_in()){ ?>
+								    <img class="header-user-icon" src="<?php echo esc_url( get_avatar_url( $user->ID ) ); ?>"  />
+								<?php } else { ?>
+									<span class="glyphicon glyphicon-user"></span>
+								<?php } ?>
+							</div>
+						</a>
 					</div>
 				</div>
 			</div>
