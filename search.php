@@ -14,22 +14,36 @@ get_header(); ?>
 			</header><!-- .page-header -->
 
 			<div id="primary" class="content-area">
-				<main id="main" class="site-main" role="main">
+				<main id="main" class="search-main row" role="main">
 
 				<?php
 				if ( have_posts() ) :
 				    /* Start the Loop */
 				    while ( have_posts() ) : the_post(); ?>
 				        <article>
-				            <div class="loop-title">	
-				                <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+				        	<?php 
+				        		if( has_post_thumbnail() ){
+				        	?>
+				        		<div class="card-image col-xs-12 col-sm-6 col-md-3">
+					        		<a href="<?php the_permalink(); ?>">
+					        			<?php the_post_thumbnail(full, array('class' => 'image-responsive', ) ); ?>
+					        		</a>
+				        		</div>
+				        	<?php 
+				        		}//if( has_post_thumbnail() )
+				        	?>
+				        	<div class="col-xs-12 col-sm-6 col-md-9">
+					            <div class="loop-title">
+					                <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+					            </div>
+					            <div class="page-content">	
+					               
+					                 <?php the_excerpt(); ?>
+					                
+					            </div>
 				            </div>
-				            <div class="page-content">	
-				               
-				                 <?php the_excerpt(); ?>
-				                
-				            </div><!-- .container -->
 				        </article>
+				        <div class="clearfix"></div>
 				    <?php
 				    endwhile; // End of the loop.
 
@@ -57,3 +71,6 @@ get_header(); ?>
 
 
 <?php get_footer();
+
+
+

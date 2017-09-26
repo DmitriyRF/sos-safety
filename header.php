@@ -70,7 +70,7 @@
 						</div>
 						<div class="top-section">
 							<div class="show-top-header main-color first-top-section">
-							<a>
+							<a href="<?php echo esc_url( get_permalink(1) ); ?>">
 								<span class="glyphicon glyphicon-fire"></span>
 								<span>Advanced Protection</span>
 							</a>

@@ -298,7 +298,7 @@ a.goog-logo-link {
 }
 
 .main-banner .carousel-caption> h2 {
-	font-size: 34px;	
+	font-size: 34px!important;	
 	text-transform: uppercase;
 	margin-bottom: 20px;
     color: #333;
@@ -1516,3 +1516,4 @@ span.cross-btn {
 img.test{
   height: 170px;
 }
+
