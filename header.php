@@ -117,6 +117,9 @@
 								<div id="menu-hidden-coll">
 									<?php wp_nav_menu( array( 'theme_location' 	=> 'top') ); ?>
 								</div>
+								<div class="company-links-menu">
+									<?php wp_nav_menu( array( 'theme_location' 	=> 'company') ); ?>
+								</div>
 							</div>
 						</div>
 					</div><!-- hd-inner -->

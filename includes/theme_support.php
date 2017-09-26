@@ -15,8 +15,9 @@ function sos_setup() {
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-		'top'    => __( 'Main Menu', 'sos' ),
-		'footer' => __( 'Footer Menu', 'sos' )
+		'top'    		=> __( 'Main Menu', 'sos' ),
+		'company'    	=> __( 'Company links', 'sos' ),
+		'footer' 		=> __( 'Footer Menu', 'sos' )
 		// 'company' => __( 'Top Company Menu', 'sos' ),
 	) );
 

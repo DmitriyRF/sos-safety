@@ -120,6 +120,17 @@ nav #all-products-button {
   padding: 10px 30px;
   text-align: center;
   font-weight: bold;
+  position: relative;
+  float: left;
+}
+nav #all-products-button:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  top: 0;
+  right: 0;
 }
 nav #all-products-button:hover {
   background: #777;
@@ -170,6 +181,32 @@ nav .wp-megamenu-main-wrapper.wpmm-orientation-vertical {
   position: relative;
   width: 25%;
   min-width: 250px;
+}
+nav .company-links-menu {
+  display: inline-block;
+  float: left;
+}
+nav .company-links-menu .wp-megamenu-main-wrapper.wpmm-ctheme-wrapper.wpmega-horizontal.wpmm-orientation-horizontal ul.wpmm-mega-wrapper > li:hover {
+  background: #777;
+  /* For browsers that do not support gradients */
+
+  background: -webkit-linear-gradient(#222222, #444444);
+  /* For Safari 5.1 to 6.0 */
+
+  background: -o-linear-gradient(#222222, #444444);
+  /* For Opera 11.1 to 12.0 */
+
+  background: -moz-linear-gradient(#222222, #444444);
+  /* For Firefox 3.6 to 15 */
+
+  background: linear-gradient(#222222, #444444);
+}
+nav .company-links-menu .wp-megamenu-main-wrapper.wpmm-ctheme-wrapper.wpmega-horizontal.wpmm-orientation-horizontal ul.wpmm-mega-wrapper > li > a.wp-mega-menu-link {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 10px 30px;
 }
 .goog-te-gadget .goog-te-combo {
   margin: 1px 0!important;
