@@ -70,7 +70,7 @@
 						</div>
 						<div class="top-section">
 							<div class="show-top-header main-color first-top-section">
-							<a href="<?php echo esc_url( get_permalink(1) ); ?>">
+							<a>
 								<span class="glyphicon glyphicon-fire"></span>
 								<span>Advanced Protection</span>
 							</a>
@@ -113,11 +113,10 @@
 					<div class="hd-inner">
 						<div class="col-xs-12">
 							<div class="nav-header-menu">
-			                    <?php 
-									wp_nav_menu( 
-										array( 'theme_location' 	=> 'top') 
-									); 
-								?>
+								<span id="all-products-button"><span class="glyphicon glyphicon-list"></span> All products</span>
+								<div id="menu-hidden-coll">
+									<?php wp_nav_menu( array( 'theme_location' 	=> 'top') ); ?>
+								</div>
 							</div>
 						</div>
 					</div><!-- hd-inner -->

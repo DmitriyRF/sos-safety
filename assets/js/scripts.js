@@ -51,7 +51,24 @@ jQuery(function ($) {
 		jQuery(this).parent('a').next('ul').toggle();
 		return false;
 	});
-	
+
+	// Show Search if form is not active // event.preventDefault() is important, this prevents the form from submitting
+	$('#all-products-button').hover(
+		function() {
+		    $('#menu-hidden-coll').addClass('active-menu');
+		  }, 
+		function() {
+		    $('#menu-hidden-coll').removeClass('active-menu');
+		  }
+	);	
+	$('#menu-hidden-coll').hover(
+		function() {
+		    $('#all-products-button').addClass('hover-background');
+		  }, 
+		function() {
+		    $('#all-products-button').removeClass('hover-background');
+		  }
+	);
 });
 
 jQuery(window).load(function() {
