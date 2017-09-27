@@ -637,7 +637,7 @@ tfoot .order-total {
 .woocommerce .woocommerce-product-rating .star-rating,
 .woocommerce .woocommerce-product-rating .woocommerce-review-link {
   font-size: 20px;
-  color: #C13E51;
+  color: #C11B21;
 }
 .woocommerce #reviews #comments ol.commentlist li img.avatar {
   width: 45px;
@@ -783,4 +783,28 @@ div#mega-menu-wrap-primary .left-top-mega-menu-image {
 .post-nav {
   margin: 0 auto;
   text-align: center;
+}
+div.star-rating {
+  color: #C11B21;
+}
+#review_form_wrapper #email-notes {
+  display: none;
+}
+.woocommerce #review_form #respond input,
+.woocommerce #review_form #respond textarea,
+.woocommerce #review_form #respond p.stars {
+  font-size: 17px;
+}
+.woocommerce #review_form #respond p.stars,
+.woocommerce #review_form #respond p.stars a {
+  color: #C11B21;
+}
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover {
+  background-color: #C11B21;
+  text-decoration: none;
+  background-image: none;
+  color: #FFFFFF;
 }

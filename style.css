@@ -681,6 +681,26 @@ body.single-product .summary.entry-summary input.wpi-button:hover{
     text-align: center;
     width: 100%;
 }
+.woocommerce #review_form #respond label {
+  text-align: right;
+}
+@media (max-width: 991px){
+    .woocommerce #review_form #respond label {
+      width: 31%;
+      float: left;
+      padding-left: 1%;
+    }
+    .woocommerce #review_form #respond p.form-submit {
+      width: 80%;
+    }  
+    .woocommerce #review_form #respond p.stars {
+      font-size: 30px;
+    } 
+}
+span#reply-title {
+  font-weight: 700;
+  font-size: 20px;
+}
 body .ui-widget-content {
     border-radius: 3px;
     border:none;  
