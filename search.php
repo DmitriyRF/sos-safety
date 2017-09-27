@@ -17,7 +17,7 @@ get_header(); ?>
 				<main id="main" class="search-main row" role="main">
 
 				<?php
-				if ( have_posts() ) :
+				if ( have_posts() ){
 				    /* Start the Loop */
 				    while ( have_posts() ) : the_post(); ?>
 				        <article>
@@ -47,17 +47,15 @@ get_header(); ?>
 				    <?php
 				    endwhile; // End of the loop.
 
-				    the_posts_pagination( array(
-				        'prev_text' => '<span class="screen-reader-text">' . __( 'Previous page', 'sos' ) . '</span>',
-				        'next_text' => '<span class="screen-reader-text">' . __( 'Next page', 'sos' ) . '</span>',
-				        'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'sos' ) . ' </span>',
-				    ) );
 
-				else : ?>
+					if ( function_exists('sos_bootstrap_pagination') )
+					    sos_bootstrap_pagination();
+
+				}else{ ?>
 
 				    <p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'sos' ); ?></p>
 				    <?php
-				endif;
+				}
 				?>
 
 				</main><!-- #main -->

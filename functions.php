@@ -13,6 +13,8 @@ include(get_template_directory() . '/includes/header_menu_add_class.php');
 include(get_template_directory() . '/includes/woocommerce_pdf_product_tab.php');
 include(get_template_directory() . '/includes/woocommerce_products_pages_customization.php');
 
+require_once(get_template_directory() . '/includes/bootstrap-pagination.php');
+
 
 // actions
 add_action( 'after_setup_theme', 'sos_setup' );
