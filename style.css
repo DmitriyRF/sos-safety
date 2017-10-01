@@ -1537,3 +1537,10 @@ img.test{
   height: 170px;
 }
 
+.categorydiv div.tabs-panel, 
+.customlinkdiv div.tabs-panel, 
+.posttypediv div.tabs-panel, 
+.taxonomydiv div.tabs-panel, 
+.wp-tab-panel {
+  max-height: 500px;
+}
