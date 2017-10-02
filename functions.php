@@ -26,6 +26,7 @@ add_action( 'add_meta_boxes', 'sos_add_events_metaboxes' );
 add_action( 'save_post', 'sos_meta_box_save' );
 add_action( 'woocommerce_product_options_shipping', 'woocommerce_product_custom_fields');// Display Fields
 add_action( 'woocommerce_process_product_meta', 'woocommerce_product_custom_fields_save'); // Save Fields
+add_action( '', 'woocommerce_product_custom_fields_display');
 // filters
 add_filter( 'nav_menu_link_attributes', 'sos_header_menu_add_class', 10, 3 );//Add page scroll for anchor tag- navigation
 

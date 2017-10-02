@@ -20,7 +20,15 @@ add_filter( 'woocommerce_product_tabs', 'sos_related_product_tab' );
 function sos_catalog_tab_content_show_pdf_link_frontend() {
 	$pdf_url = get_post_meta(get_the_ID(), 'pdf_url', true);
 	if(!empty($pdf_url)) {
-		echo '<a class="pdf-catalog" href="'.$pdf_url.'" target="_blank">'.__('View catalog pdf', 'sos').'</a>'; 
+        if ( count( $pdf_url ) > 0 && is_array($pdf_url)) {
+            foreach( $pdf_url as $pdf_url_each ) {
+                if ( isset( $pdf_url_each) && $pdf_url_each != '') { 
+                    echo '<a class="pdf-catalog" href="'.$pdf_url_each.'" target="_blank">'.__('View catalog pdf', 'sos').'</a><br/>';
+                }       
+            }
+        }else{
+            echo '<a class="pdf-catalog" href="'.$pdf_url.'" target="_blank">'.__('View catalog pdf', 'sos').'</a><br/>';
+        }
 	}
 }
 
@@ -33,25 +41,81 @@ function sos_pdf_uploads_html() {
 	global $post;
 		
 	$pdf_url = get_post_meta($post->ID, 'pdf_url', true);
-	
 	// Echo out the field
-	wp_nonce_field( 'sos_pdf_nonce_action', 'sos_pdf_nonce_field' );
 	?>
-	<table class="form-table">
-		<tbody>
-		<tr>
-			<th scope="row"><label for="pdf_url"><?php _e('PDF URL:', 'sos'); ?></label></th>
-			<td><input type="text" class="regular-text" value="<?php echo $pdf_url; ?>" id="pdf_url" name="pdf_url"><input type="button" id="pdf_uploads" value="Upload"></td>
-		</tr>
-		<tbody>
+    <table class="form-table-pdf">
+    <?php
+    $c = 0;
+    wp_nonce_field( 'sos_pdf_nonce_action', 'sos_pdf_nonce_field' );
+    if ( count( $pdf_url ) > 0 && is_array($pdf_url)) {
+        foreach( $pdf_url as $pdf_url_each ) {
+            if ( isset( $pdf_url_each)  && $pdf_url_each != '') {
+                ?>
+                <tr>
+                    <th scope="row">
+                        <label for="pdf_url_<?php echo $c; ?>">
+                            <?php _e('PDF URL:', 'sos'); ?>    
+                        </label>
+                    </th>
+                    <td>
+                        <input type="text" class="regular-text pdf_url" value="<?php echo $pdf_url_each; ?>" id="pdf_url_<?php echo $c; ?>" name="pdf_url[<?php echo  $c; ?>]">
+                        <input type="button" class="pdf_uploads" value="Upload">
+                        <a href="#" class="remove-package"><?php echo "Remove"; ?></a>
+                    </td>
+                </tr>   
+                <?php
+                $c++;
+            }
+        }
+    }else{//this the else for the old version of database structure
+        ?>
+                <tr>
+                    <th scope="row">
+                        <label for="pdf_url_<?php echo $c; ?>">
+                            <?php _e('PDF URL:', 'sos'); ?>    
+                        </label>
+                    </th>
+                    <td>
+                        <input type="text" class="regular-text pdf_url" value="<?php echo $pdf_url; ?>" id="pdf_url_<?php echo $c; ?>" name="pdf_url[<?php echo  $c; ?>]">
+                        <input type="button" class="pdf_uploads" value="Upload">
+                        <a href="#" class="remove-package"><?php echo "Remove"; ?></a>
+                    </td>
+                </tr>
+    <?php 
+    $c++;  
+    }
+    ?>
+                <tr>
+                    <th scope="row">
+                        <label for="pdf_url_<?php echo $c; ?>">
+                            <?php _e('PDF URL:', 'sos'); ?>    
+                        </label>
+                    </th>
+                    <td>
+                        <input type="text" class="regular-text pdf_url" value="" id="pdf_url_<?php echo $c; ?>" name="pdf_url[<?php echo  $c; ?>]">
+                        <input type="button" class="pdf_uploads" value="Upload">
+                        <a href="#" class="remove-package"><?php echo "Remove"; ?></a>
+                    </td>
+                </tr>  		
 	</table>
+    <a href="#" id="add_pdf"><?php _e('Add PDF Details'); ?></a>
 	<script>
-	var sos_gallery_frame;
-    var $pdf_url = jQuery( '#pdf_url' );
-
-    jQuery( '#pdf_uploads' ).on( 'click', function( event ) {
+    jQuery(document.body).on('click','.remove-package',function(event) {
+                event.preventDefault();
+                jQuery(this).parent().parent().remove();
+            });
+    var count = <?php echo $c; ?>;
+    jQuery("#add_pdf").click(function(event) {
+        event.preventDefault();
+        count = count + 1;
+        jQuery('.form-table-pdf').append('<tr><th scope="row"><label for="pdf_url_'+count+'"><?php _e("PDF URL:", "sos"); ?></label></th><td><input type="text" class="regular-text pdf_url" value="" id="pdf_url_'+count+'" name="pdf_url['+count+']"><input type="button" class="pdf_uploads" value="Upload"><a href="#" class="remove-package"><?php echo "Remove"; ?></a></td></tr>');
+        return false;
+    });
+	
+     jQuery(document.body).on('click','.pdf_uploads',function(event) {
+        var sos_gallery_frame;
         var $el = jQuery( this );
-
+        var $pdf_url = $el.prev('.pdf_url');
         event.preventDefault();
 
         // If the media frame already exists, reopen it.
@@ -63,7 +127,7 @@ function sos_pdf_uploads_html() {
         // Create the media frame.
         sos_gallery_frame = wp.media.frames.sos_gallery = wp.media({
             // Set the title of the modal.
-            title: $el.data( 'choose' ),
+            title: $el.data( 'choose pdf' ),
             button: {
                 text: $el.data( 'update' )
             },
@@ -71,13 +135,13 @@ function sos_pdf_uploads_html() {
                 new wp.media.controller.Library({
                     title: $el.data( 'choose' ),
                     filterable: 'all',
-                    multiple: true
+                    multiple: false
                 })
             ]
         });
 
         // When an image is selected, run a callback.
-        sos_gallery_frame.on( 'select', function() {
+        sos_gallery_frame.on( 'select', function(event) {
             var selection = sos_gallery_frame.state().get( 'selection' );
              selection.map( function( attachment ) {
                 attachment = attachment.toJSON();

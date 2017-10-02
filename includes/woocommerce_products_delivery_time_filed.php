@@ -7,35 +7,6 @@ function woocommerce_product_custom_fields()
 
     echo '<div class="product_custom_field">';
     // Custom Product Text Field
-    woocommerce_wp_text_input(
-        array(
-            'id' => '_custom_product_text_field',
-            'placeholder' => 'Custom Product Text Field',
-            'label' => __('Custom Product Text Field', 'woocommerce'),
-            'desc_tip' => 'true'
-        )
-    );
-    //Custom Product Number Field
-    woocommerce_wp_text_input(
-        array(
-            'id' => '_custom_product_number_field',
-            'placeholder' => 'Custom Product Number Field',
-            'label' => __('Custom Product Number Field', 'woocommerce'),
-            'type' => 'number',
-            'custom_attributes' => array(
-                'step' => 'any',
-                'min' => '0'
-            )
-        )
-    );
-    //Custom Product  Textarea
-    woocommerce_wp_textarea_input(
-        array(
-            'id' => '_custom_product_textarea',
-            'placeholder' => 'Custom Product Textarea',
-            'label' => __('Custom Product Textarea', 'woocommerce')
-        )
-    );
     woocommerce_wp_select(
     	array(
     		'id' => 	'_sos_product_type_delivery',
@@ -85,13 +56,18 @@ function woocommerce_product_custom_fields_save($post_id)
 {
     if( isset( $_POST['_sos_product_type_delivery'] ) ){
     	$woocommerce_custom_sos_product_type_delivery = $_POST['_sos_product_type_delivery'];
-    	if (!empty($woocommerce_custom_sos_product_type_delivery) = "none")
+    	if (!empty($woocommerce_custom_sos_product_type_delivery) == "none")
         	update_post_meta($post_id, '_sos_product_type_delivery', $woocommerce_custom_sos_product_type_delivery);
 	}
-	
-    if( isset( $_POST['_sos_product_type_delivery'] ) ){
+
+    if( isset( $_POST['_sos_product_time_delivery'] ) ){
 	    $woocommerce_custom_sos_product_time_delivery = $_POST['_sos_product_time_delivery'];
-	    if (!empty($woocommerce_custom_sos_product_time_delivery) = "none")
+	    if (!empty($woocommerce_custom_sos_product_time_delivery) == "none")
 	        update_post_meta($post_id, '_sos_product_time_delivery', $woocommerce_custom_sos_product_time_delivery);
 	}
+}
+
+function woocommerce_product_custom_fields_display()
+{
+	
 }
