@@ -69,5 +69,54 @@ function woocommerce_product_custom_fields_save($post_id)
 
 function woocommerce_product_custom_fields_display()
 {
-	
+	?><p class="shipping-time-product"><?php
+    if( $i = get_post_meta(get_the_ID(), '_sos_product_type_delivery', true) ){
+    	?><i class="fa fa-truck" aria-hidden="true"></i><?php
+	    switch ($i)
+	    {
+		    case 0:
+		        echo " Ships via freight ";
+		        break;			    
+		    case 1:
+		        echo " Ships via Standard Ground";
+		        break;			    
+		}
+    } 
+    if( $j = get_post_meta(get_the_ID(), '_sos_product_time_delivery', true) ){    
+    	?> <i class="fa fa-clock-o" aria-hidden="true"></i> <?php  
+	    switch ($j)
+	    {
+		    case 0:
+		        echo " 3-4 days ";
+		        break;
+		    case 1:
+		        echo " 1 week ";
+		        break;			    
+		    case 2:
+		        echo " 1-2 weeks ";
+		        break;			    
+		    case 3:
+		        echo " 1-3 weeks ";
+		        break;			    
+		    case 4:
+		        echo " 2-5 weeks ";
+		        break;			    
+		    case 5:
+		        echo " 3-7 weeks ";
+		        break;			    
+		    case 6:
+		        echo " 5-8 weeks ";
+		        break;			    
+		    case 7:
+		        echo " 6-9 weeks ";
+		        break;			    
+		    case 8:
+		        echo " 8-10 weeks ";
+		        break;			   
+		    case 9:
+		        echo " 9-12 weeks ";
+		        break;
+		}
+    }
+    ?></p><?php
 }

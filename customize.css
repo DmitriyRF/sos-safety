@@ -853,3 +853,7 @@ img.menu-image-top-right {
 .wp-megamenu-main-wrapper.wpmm-ctheme-wrapper.wpmega-default-theme-1.wpmm-orientation-vertical ul.wpmm-mega-wrapper li .wpmm-sub-menu-wrap {
   border: none!important;
 }
+p.shipping-time-product {
+  font-size: 16px;
+  font-weight: 700;
+}
