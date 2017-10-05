@@ -108,7 +108,7 @@
 	<nav id="navbar-main">
 		<div class="navbar" role="navigation">
          <!-- Brand and toggle get grouped for better mobile display -->
-			<div class="container">
+			<div class="container-fluid">
 				<div class="row">  
 					<div class="hd-inner">
 						<div class="col-xs-12">
