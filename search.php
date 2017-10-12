@@ -11,16 +11,25 @@ get_header(); ?>
 				<?php else : ?>
 				    <h1 class="page-title"><?php _e( 'Nothing Found', 'sos' ); ?></h1>
 				<?php endif; ?>
+				<div class="btn-group">
+				    <a href="#" id="list" class="btn btn-default btn-sm active">
+				    	<span class="glyphicon glyphicon-th-list"></span>  List view</a>
+				    <a href="#" id="grid" class="btn btn-default btn-sm">
+				    	<span class="glyphicon glyphicon-th"></span>  Grid view</a>
+				</div>
 			</header><!-- .page-header -->
 
 			<div id="primary" class="content-area">
 				<main id="main" class="search-main row" role="main">
 
 				<?php
-				if ( have_posts() ){
+				if ( have_posts() ){	?>
+					<div id="search">
+					<?php
 				    /* Start the Loop */
 				    while ( have_posts() ) : the_post(); ?>
-				        <article>
+				    
+				        <article class="list-group-item">
 				        	<?php 
 				        		if( has_post_thumbnail() ){
 				        	?>
@@ -32,7 +41,7 @@ get_header(); ?>
 				        	<?php 
 				        		}//if( has_post_thumbnail() )
 				        	?>
-				        	<div class="col-xs-12 col-sm-6 col-md-9">
+				        	<div class="card-caption col-xs-12 col-sm-6 col-md-9">
 					            <div class="loop-title">
 					                <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 					            </div>
@@ -43,15 +52,14 @@ get_header(); ?>
 					            </div>
 				            </div>
 				        </article>
-				        <div class="clearfix"></div>
 				    <?php
 				    endwhile; // End of the loop.
 
 
 					if ( function_exists('sos_bootstrap_pagination') )
-					    sos_bootstrap_pagination();
-
-				}else{ ?>
+					    sos_bootstrap_pagination();?>
+				</div>
+				<?php }else{ ?>
 
 				    <p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'sos' ); ?></p>
 				    <?php

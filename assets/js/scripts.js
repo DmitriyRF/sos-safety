@@ -69,6 +69,25 @@ jQuery(function ($) {
 		    $('#all-products-button').removeClass('hover-background');
 		  }
 	);
+
+	$(document).ready(function() {
+   		$('#list').click(function(event){
+   			event.preventDefault();
+   			$(this).toggleClass('active');
+   			$('#grid').toggleClass('active');
+   			$('#search article').removeClass('grid-group-item');
+   			$('#search article').addClass('list-group-item');
+   		});
+    	
+    	$('#grid').click(function(event){
+    		event.preventDefault();
+    		$(this).toggleClass('active');
+   			$('#list').toggleClass('active');
+    		$('#search article').removeClass('list-group-item');
+    		$('#search article').addClass('grid-group-item');
+    	});
+
+	});
 });
 
 jQuery(window).load(function() {

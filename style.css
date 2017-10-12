@@ -198,6 +198,22 @@ b, strong {
 
 .nav-header-menu {
     width: 100%;
+    display: block;
+    position: relative;
+}
+@media screen and (min-width: 1750px)
+{
+    .nav-header-menu
+    {
+        margin-left: 125px;
+    }
+}   
+@media screen and (min-width: 1900px)
+{
+    .nav-header-menu
+    {
+        margin-left: 250px;
+    }
 }
 .dropdown-menu {
     padding: 1px 0px;
