@@ -30,3 +30,4 @@ add_action( 'woocommerce_single_product_summary', 'woocommerce_product_custom_fi
 // filters
 add_filter( 'nav_menu_link_attributes', 'sos_header_menu_add_class', 10, 3 );//Add page scroll for anchor tag- navigation
 
+update_option('yith_wcbr_single_thumb_width', 160);

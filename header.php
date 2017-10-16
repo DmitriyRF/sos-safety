@@ -16,73 +16,86 @@
 <div class="wrap watermark">
 	<header>
 		<div class="header-top">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12">
-						<div class="top-section">
-							<div class="show-top-header">
-								<div id="google_translate_element">
-								</div>
-								<script type="text/javascript">
-									function googleTranslateElementInit() {
-									  new google.translate.TranslateElement({
-										pageLanguage: 'en',
-										layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL    }, 'google_translate_element');
-									}
-								</script>
-								<script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-								
+			<nav role="navigation">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top-sos-safety-navigation">
+								    <span class="sr-only">Toggle navigation</span>
+								    <span class="icon-bar"></span>
+								    <span class="icon-bar"></span>
+								    <span class="icon-bar"></span>
+								</button>
 							</div>
-						</div>
-						<div class="top-section">
-							<div class="show-top-header">
-								<span class="glyphicon glyphicon-globe"></span>
-								<span><a href="<?php echo esc_url( get_permalink(11) ); ?>">About us</a></span>
-								<span class="toggle-area dropdown-toggle " data-toggle="dropdown">
-									<span class="caret"></span>
-									<span class="sr-only">Menu</span>
-								</span>
-								<ul class="dropdown-menu">
-								    <li><a href="<?php echo esc_url( get_permalink(15) ); ?>">Location</a></li>
-								    <li><a href="<?php echo esc_url( get_permalink(13) ); ?>">News</a></li>
+							 <div class="collapse navbar-collapse" id="top-sos-safety-navigation">
+							 	<ul class="nav navbar-nav">
+									<li class="top-section">
+										<div class="show-top-header">
+											<div id="google_translate_element">
+											</div>
+											<script type="text/javascript">
+												function googleTranslateElementInit() {
+												  new google.translate.TranslateElement({
+													pageLanguage: 'en',
+													layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL    }, 'google_translate_element');
+												}
+											</script>
+											<script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+										</div>
+									</li>
+									<li class="top-section">
+										<div class="show-top-header">
+											<span class="glyphicon glyphicon-globe"></span>
+											<span><a href="<?php echo esc_url( get_permalink(11) ); ?>">About us</a></span>
+											<span class="toggle-area dropdown-toggle " data-toggle="dropdown">
+												<span class="caret"></span>
+												<span class="sr-only">Menu</span>
+											</span>
+											<ul class="dropdown-menu">
+											    <li><a href="<?php echo esc_url( get_permalink(15) ); ?>">Location</a></li>
+											    <li><a href="<?php echo esc_url( get_permalink(13) ); ?>">News</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="top-section">
+										<div class="show-top-header">						
+												<span class="glyphicon glyphicon-earphone"></span>
+											    <span><a href="tel:+15612374247">(561) 237-4247</a></span>
+											    <span class="toggle-area dropdown-toggle " data-toggle="dropdown">
+											    	<span class="caret"></span>
+											    	<span class="sr-only">Menu</span>
+											    </span>
+											<ul class="dropdown-menu">
+											    <!-- <li><a href="#">Fax: (561) 237-4248</a></li> -->
+											    <li><a href="mailto:info@sos-safety.com">
+											    	<span class="glyphicon glyphicon-envelope"></span>
+											    	 info@sos-safety.com</a>
+											    </li>
+											    <li role="presentation" class="divider"></li>
+											    <li><a href="<?php echo esc_url( get_permalink(17) ); ?>">Contact us</a></li>
+											    <li><a href="<?php echo esc_url( get_permalink(142) ); ?>">Information Request</a></li>
+											</ul>
+										</div>
+									</li>
+									<li class="top-section">
+										<div class="show-top-header main-color first-top-section">
+										<a>
+											<span class="glyphicon glyphicon-fire"></span>
+											<span>Advanced Protection</span>
+										</a>
+										</div>
+									</li>
 								</ul>
-							</div>
-						</div>
-						<div class="top-section">
-							<div class="show-top-header">						
-									<span class="glyphicon glyphicon-earphone"></span>
-								    <span><a href="tel:+15612374247">(561) 237-4247</a></span>
-								    <span class="toggle-area dropdown-toggle " data-toggle="dropdown">
-								    	<span class="caret"></span>
-								    	<span class="sr-only">Menu</span>
-								    </span>
-								<ul class="dropdown-menu">
-								    <!-- <li><a href="#">Fax: (561) 237-4248</a></li> -->
-								    <li><a href="mailto:info@sos-safety.com">
-								    	<span class="glyphicon glyphicon-envelope"></span>
-								    	 info@sos-safety.com</a>
-								    </li>
-								    <li role="presentation" class="divider"></li>
-								    <li><a href="<?php echo esc_url( get_permalink(17) ); ?>">Contact us</a></li>
-								    <li><a href="<?php echo esc_url( get_permalink(142) ); ?>">Information Request</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="top-section">
-							<div class="show-top-header main-color first-top-section">
-							<a href="<?php echo esc_url( get_permalink(1) ); ?>">
-								<span class="glyphicon glyphicon-fire"></span>
-								<span>Advanced Protection</span>
-							</a>
-							</div>
+							 </div>
 						</div>
 					</div>
 				</div>
-			</div>
+			</nav>
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-3 logobg">
+				<div class="col-xs-5 col-sm-3 logobg">
 					<?php 					
 					if ( function_exists( 'the_custom_logo' ) ) {
 						the_custom_logo();

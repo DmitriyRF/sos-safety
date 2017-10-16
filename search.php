@@ -54,12 +54,12 @@ get_header(); ?>
 				        </article>
 				    <?php
 				    endwhile; // End of the loop.
-
-
-					if ( function_exists('sos_bootstrap_pagination') )
-					    sos_bootstrap_pagination();?>
+					?>
 				</div>
-				<?php }else{ ?>
+				<?php 
+					if ( function_exists('sos_bootstrap_pagination') )
+					    sos_bootstrap_pagination();
+				}else{ ?>
 
 				    <p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'sos' ); ?></p>
 				    <?php

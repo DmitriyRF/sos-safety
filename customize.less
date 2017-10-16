@@ -49,6 +49,15 @@ header
         {
             border: none;
         }
+        @media (max-width: 767px)
+        {
+            ul.nav.navbar-nav
+            {
+                position: absolute;
+                top: 30px;
+                right: 0;
+            }
+        }
         .top-section
         {
             font-size: 14px;
@@ -60,6 +69,12 @@ header
             float: right;
 
             height: 30px;
+            @media (max-width: 767px)
+            {
+                display: block;
+                float: none;
+                height: auto;
+            }
             .show-top-header
             {
                 line-height: 30px;
@@ -68,6 +83,10 @@ header
                 padding: 0 0 0 10px;
 
                 border-left: 1px solid #ccc;
+                @media (max-width: 767px)
+                {
+                    height: auto;
+                }
             }
             &:hover .show-top-header,
             &:active .show-top-header
@@ -87,6 +106,12 @@ header
 
                 border-left: 1px solid #eee;
             }
+        }
+    }
+    @media (max-width: 767px){
+        .navbar-nav .top-section .open .dropdown-menu {
+            position: relative;
+            background-color: rgb(254, 254, 254);
         }
     }
     .logobg a img
@@ -144,6 +169,36 @@ header
     a
     {
         color: inherit;
+    }
+    .navbar-toggle {
+      position: relative;
+      float: right;
+      padding: 0;
+      margin-top: 6px;
+      margin-right: 0px;
+      margin-bottom: 8px;
+      background-color: transparent;
+      background-image: none;
+      border: 1px solid transparent;
+      border-radius: 0; 
+      .icon-bar {
+            background: #363636 none repeat scroll 0 0;
+        }
+    }
+    .navbar-header
+    {
+        display: none;
+        background-color: transparent;
+        @media (max-width: 767px)
+        {
+            display: inline-block;
+            float: right;
+        }
+    }
+    @media (min-width: 768px){
+        .collapse {
+            display: block;
+        }
     }
 }
 nav
@@ -388,12 +443,19 @@ nav
 
     float: left;
 
-    width: 20%;
-    width: ~'calc( 100%/5)';
+ 
     min-height: 285px;
     margin: 0;
     margin-left: 0;
     padding: 0;
+    @media (min-width: 768px)
+    {
+        width: 20%;
+    }
+    @media (max-width: 991px) and (min-width: 768px)
+    {
+        min-height: 200px;
+    }
 }
 
 
@@ -406,6 +468,9 @@ nav
     vertical-align: middle;
 
     .vertical-align(absolute);
+    @media (max-width: 767px){
+        max-width: 100%;
+    }
 }
 
 .h1,
@@ -446,6 +511,10 @@ h3
     top: 0;
 
     margin: 0;
+    @media (max-width:991px)
+    {
+        font-size: 11px;
+    }
 }
 .woocommerce ul.products li.product:hover
 {
@@ -483,6 +552,11 @@ h3
     // margin-left: -130px;
 
     border: 1px solid transparent;
+
+    @media (max-width: 991px) and (min-width: 768px)
+    {
+        min-height: 230px;
+    }
 }
 
 .woocommerce ul.products li.product .onsale
@@ -601,7 +675,7 @@ h3
 .image-square-thumbnail
 {
     position: relative;
-
+    min-height: 200px;
     display: block;
     /* Extra small devices (phones, less than 768px) */
     /* No media query since this is the default in Bootstrap */
@@ -1110,6 +1184,14 @@ div#mega-menu-wrap-primary .left-top-mega-menu-image
 }
 #search
 {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
     article
     {
         -webkit-transition: all .25s linear;
@@ -1145,12 +1227,25 @@ div#mega-menu-wrap-primary .left-top-mega-menu-image
         overflow: auto;
         float: left;
         width: 50%;
-        @media (min-width: 992px){
-            width: 33,33%;
+        @media (max-width: 991px)
+        {
+            &:nth-child(2n+3){
+               clear: both;
+            }
+        }
+        @media (min-width: 992px) and (max-width: 1199px){
+            width: 33.33%;            
+            &:nth-child(3n+4){
+               clear: both;
+            }
         }
         @media (min-width: 1200px){
             width: 25%;
+            &:nth-child(4n+5){
+               clear: both;
+            }
         }
+
         .card-image 
         {
             min-height: 200px;
@@ -1351,4 +1446,8 @@ a#list.active {
 a#grid.active {
   color: white;
   background: #C11B21;
+}
+
+.wpmm_megamenu .woocommerce ul.product_list_widget li a {
+  font-size: 14px;
 }

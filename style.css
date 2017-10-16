@@ -478,12 +478,19 @@ h2.woocommerce-loop-product__title {
 }
 .woocommerce h2 {
     text-align: center;
-    font-size: 15px !important;
+    font-size: 15px;
     color:#4F4F4F;
     text-transform: capitalize;
     // border-top:1px solid #aaa;
     padding:10px 5px 5px;
     font-weight: bold;
+}
+@media (max-width: 991px) and (min-width: 768px)
+{
+    .woocommerce ul.products li.product h2.woocommerce-loop-product__title {
+      font-size: 10px;
+    }
+
 }
 .woocommerce section.related.products > h2{
    font-size: 20px !important; 
@@ -814,7 +821,7 @@ input.wpi-button {
 
 .woof_list label {
     font-weight: 400;
-    width:80%;
+    width:75%;
 }
 .widget-woof h2.widget-title {
     color: #c11b21;
@@ -824,16 +831,13 @@ input.wpi-button {
 }
 .widget-woof h4 {
     font-size: 15px;
-    border: 1px solid #aaa;
-    font-size: 15px;
-    padding: 8px;
     margin-top:0px;
     margin-bottom: 0px;
     font-weight: bold;
     color: #000;
 }
 .woof_block_html_items ul.woof_list {
-    padding: 5px 10px;
+    padding: 5px 0px;
 }
 .woof_block_html_items ul.woof_list label {
     padding-left:3px;
@@ -846,16 +850,16 @@ input.wpi-button {
     float:left;
     margin:5px 0 0;
 }
-.woof_front_toggle_closed::after {
-    content: "+";
-    font-size: 16px;
-    width: 10px;
-}
-.woof_front_toggle_opened::after {
-    content: "–";
-    font-size: 16px;
-    width: 10px;
-}
+// .woof_front_toggle_closed::after {
+//     content: "+";
+//     font-size: 16px;
+//     width: 10px;
+// }
+// .woof_front_toggle_opened::after {
+//     content: "–";
+//     font-size: 16px;
+//     width: 10px;
+// }
 .woof_front_toggle_closed, .woof_front_toggle_opened {
     font-size: 0;
     text-decoration: none;   
@@ -1268,7 +1272,7 @@ span.cross-btn {
     display: block;
 }
 .navbar-collapse.collapse {
-    display: none!important;
+    // display: none!important;
 }
 .navbar-collapse.collapse.in {
     display: block!important;
@@ -1277,8 +1281,8 @@ span.cross-btn {
     float: none!important;
 }
 .navbar-nav>li {
-    float: none;
-    border-bottom: 1px solid #444;
+    // float: none;
+    // border-bottom: 1px solid #444;
 }
 .nav-bar-bg {
     float:none;
@@ -1302,7 +1306,7 @@ span.cross-btn {
     /* background: #666; */
     }      
 .dropdown-menu {
-    position: relative;
+    // position: relative;
     float:none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.176);
     border: none;
@@ -1396,6 +1400,11 @@ span.cross-btn {
     }
     .navbar-nav {
         margin: 0px;
+        position: absolute;
+        top: 30px;
+        right: 0;
+        z-index: 400;
+        background: #FEFEFE;
     }
     .navbar-nav li ul.dropdown-menu li {
         padding-left: 10px;
@@ -1559,4 +1568,9 @@ img.test{
 .taxonomydiv div.tabs-panel, 
 .wp-tab-panel {
   max-height: 500px;
+}
+
+.wp-megamenu-main-wrapper.wpmm-orientation-horizontal ul.wpmm-mega-wrapper li .wpmm-sub-menu-wrap 
+{
+  background: #fff;
 }
