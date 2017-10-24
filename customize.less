@@ -80,7 +80,7 @@ header
                 line-height: 30px;
 
                 height: 30px;
-                padding: 0 0 0 10px;
+                padding: 0 5px;
 
                 border-left: 1px solid #ccc;
                 @media (max-width: 767px)
@@ -105,6 +105,19 @@ header
                 padding-right: 10px;
 
                 border-left: 1px solid #eee;
+            }
+            &.screen-b-1356
+            {
+                @media (max-width:  1355px)
+                {
+                    display: none;   
+                }
+            }
+            & .screen-l-1356{
+                @media (min-width:  1356px)
+                {
+                    display: none!important;
+                }
             }
         }
     }
@@ -137,7 +150,7 @@ header
         display: inline-block;
 
         margin: 0 0 0 3px;
-        padding: 5px 10px;
+        padding: 5px 5px 5px 10px;
 
         cursor: pointer;
         text-align: center;
@@ -210,8 +223,9 @@ nav
     .navbar
     {
         min-height: 40px;
+        height: 42px;
 
-        border-bottom: 2px solid #616161;
+        border-bottom: 0;
         border-radius: 0;
         background: #5a5a5a; /* For browsers that do not support gradients */
         background: -webkit-linear-gradient(#5a5a5a, #222); /* For Safari 5.1 to 6.0 */
@@ -269,9 +283,9 @@ nav
         position: absolute;
         z-index: 900;
         top: 40px;
-        left: 15px;
 
         display: none;
+        text-align: left;
 
         min-width: 250px;
         max-width: 250px;
@@ -321,29 +335,30 @@ nav
                 & > a.wp-mega-menu-link
                 {
                     font-family: Arial, Helvetica, sans-serif;
-                    font-size: 13px;
+                    font-size: 14px;
                     font-weight: bold;
                     line-height: 20px;
 
-                    padding: 10px 15px;
-                    @media screen and (min-width: 1500px)
+                    padding: 10px 15px;                 
+                    @media screen and (min-width: 992px)
                     {
-                        padding: 10px 30px;
+                        font-size: 10px;
+                    }
+                    @media screen and (min-width: 1100px)
+                    {
+                        font-size: 13px;
                     }
                     @media screen and (min-width: 1250px)
                     {
                         font-size: 16px;
                     }
+                    @media screen and (min-width: 1500px)
+                    {
+                        padding: 10px 30px;
+                    }
+
                 }
             }
-        }
-    }
-    @media screen and (min-width: 1400px)
-    {
-        .wp-megamenu-main-wrapper.wpmm-ctheme-wrapper.wpmega-horizontal.wpmm-orientation-horizontal ul.wpmm-mega-wrapper li .wpmm-sub-menu-wrap,
-        .wp-megamenu-main-wrapper.wpmm-ctheme-wrapper.wpmega-horizontal.wpmm-orientation-vertical ul.wpmm-mega-wrapper li .wpmm-sub-menu-wrap
-        {
-            width: 1078px!important;
         }
     }
 }
@@ -1431,7 +1446,19 @@ p.shipping-time-product
 }
 .wpmm-sub-menu-wrap li.wpmega-1columns-2total
 {
-    max-width: 290px;
+    @media(min-width: 992px)
+    {
+        max-width: 290px;
+    }
+
+    @media(min-width: 1200px)
+    {
+        max-width: 400px;
+    }
+    @media(min-width: 1440px)
+    {
+        max-width: 500px;
+    }
 }
 .wpmm-sub-menu-wrap
 {
@@ -1450,4 +1477,75 @@ a#grid.active {
 
 .wpmm_megamenu .woocommerce ul.product_list_widget li a {
   font-size: 14px;
+}
+
+.wp-megamenu-main-wrapper.wpmm-ctheme-wrapper.wpmega-horizontal.wpmm-orientation-horizontal ul.wpmm-mega-wrapper li .wpmm-sub-menu-wrap
+{
+    @media (min-width: 992px)
+    {
+        width: 100%!important;
+    }
+}
+
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+        
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .carousel-control {
+        z-index: 2;
+    }
+}
+
+.woocommerce .yith-wcbr-brands-logo img.attachment-medium.size-medium {
+  width: 150px;
+}
+.screen-b-1440
+{
+        display: none;
+}
+
+.jQuery-plainOverlay-progress {
+   border-top: 3px solid #C11B21;
+}
+.woof_block_html_items input[type="checkbox"], .woof_block_html_items input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  background: #C11B21;
+  cursor: pointer;
+}
+
+.woof_text_search_container {
+    margin: 30px 0px;
+}
+
+.easy-autocomplete-container {
+    z-index: 500;
+}
+
+div.wpcf7-response-output {
+    margin: -5px 0px;
+    padding: 2em 1em;
 }

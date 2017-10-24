@@ -106,9 +106,10 @@ b, strong {
 }
 
 .hd-inner {
-	float: left;
+	// float: left;
     // max-width:1200px;
 	width: 100%;
+    text-align: center;
 }
 
 .hd-contacts {
@@ -197,24 +198,24 @@ b, strong {
 }
 
 .nav-header-menu {
-    width: 100%;
-    display: block;
+    // width: 100%;
+    display: inline-block;
     position: relative;
 }
-@media screen and (min-width: 1750px)
-{
-    .nav-header-menu
-    {
-        margin-left: 125px;
-    }
-}   
-@media screen and (min-width: 1900px)
-{
-    .nav-header-menu
-    {
-        margin-left: 250px;
-    }
-}
+// @media screen and (min-width: 1750px)
+// {
+//     .nav-header-menu
+//     {
+//         margin-left: 125px;
+//     }
+// }   
+// @media screen and (min-width: 1900px)
+// {
+//     .nav-header-menu
+//     {
+//         margin-left: 250px;
+//     }
+// }
 .dropdown-menu {
     padding: 1px 0px;
 }
@@ -1550,13 +1551,26 @@ span.cross-btn {
 .woocommerce div.product div.summary {margin-bottom: 0px;}
 .single-product .page-header h1 {font-size:26px;}
 
-.carousel-inner > .item {
-    visibility: hidden; 
-}
-.carousel-inner > .item.active {
-     visibility: visible;
-     transition: visibility 1ms linear;
-}
+// .carousel-inner > .item {
+//     opacity: 0;
+//     visibility: hidden;    
+// }
+// .carousel-inner > .item.active {
+//     // opacity: 1;    
+//     visibility: visible;
+//     opacity: 1;
+//     -webkit-transition: opacity 7s ease-in-out;
+//     transition: opacity 7s ease-in-out;
+//     animation: 7s showslide;
+//     display: block!important;
+// }
+// @keyframes showslide {
+//   from { opacity: 0;  }
+//   14%{   opacity: 1;  }
+//   78%{   opacity: 1;  }
+//   97%{   opacity: 0;  }
+//   to {   opacity: 0;  }
+// }
 
 img.test{
   height: 170px;

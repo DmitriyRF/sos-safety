@@ -11,7 +11,7 @@ $args = array(
 $slider = get_posts( $args ); 
 if(!empty($slider)) { ?>
 	<div class="hero-slider">   
-      <header id="hero-carousel" class="carousel slide main-banner">
+      <header id="hero-carousel" class="carousel slide carousel-fade main-banner">
           <div class="carousel-inner">
           	<?php
           	$k=0;

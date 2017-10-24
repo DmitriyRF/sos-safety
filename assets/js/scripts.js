@@ -26,8 +26,13 @@ jQuery(function ($) {
 	
 	
 	$('#hero-carousel').carousel({
-		interval: 4000
+		interval: 6000,
+		wrap:true
 	}); 
+	// $('#hero-carousel').on('slide.bs.carousel', function () {
+	//   $('#hero-carousel .item.active').fadeOut(300);
+	//   $('#hero-carousel .item.next').fadeIn(500);
+	// });
 	
 	$('.play-video').on('click', function (e) {
 		var $src= $(this).next().find('iframe')[0].src;
@@ -52,6 +57,13 @@ jQuery(function ($) {
 		return false;
 	});
 
+	$('nav li.top-section').hover(function() {
+	  $(this).find('.dropdown-menu').stop(true, true).delay(2).fadeIn(500);
+	}, function() {
+	  $(this).find('.dropdown-menu').stop(true, true).delay(2).fadeOut(500);
+	});
+
+
 	// Show Search if form is not active // event.preventDefault() is important, this prevents the form from submitting
 	$('#all-products-button').hover(
 		function() {
@@ -69,7 +81,7 @@ jQuery(function ($) {
 		    $('#all-products-button').removeClass('hover-background');
 		  }
 	);
-
+// Show Grid or List items in search results page.
 	$(document).ready(function() {
    		$('#list').click(function(event){
    			event.preventDefault();

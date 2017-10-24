@@ -25,7 +25,7 @@
 	<a target="_blank" href="tel:5612374247"><?php _e('(561) 237-4247', 'sos'); ?></a> | <strong><?php _e('Fax:', 'sos'); ?></strong>
 	<?php _e('(561) 237-4248', 'sos'); ?>  | 
 	<strong><?php _e('Email', 'sos'); ?></strong>: 
-	<a target="_blank" href="<?php echo get_bloginfo( 'admin_email' ); ?>">
+	<a target="_blank" href="mailto:<?php echo get_bloginfo( 'admin_email' ); ?>">
 	<?php echo get_bloginfo( 'admin_email' ); ?></a></p>
 	<p style="font-size: 11px;"><?php _e('We accept:', 'sos'); ?><br>
 	<img width="168" border="0" height="37" src="<?php echo get_bloginfo( 'template_url' ); ?>/assets/images/credit.jpg"></p>

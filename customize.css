@@ -47,7 +47,7 @@ header .header-top .top-section {
 header .header-top .top-section .show-top-header {
   line-height: 30px;
   height: 30px;
-  padding: 0 0 0 10px;
+  padding: 0 5px;
   border-left: 1px solid #ccc;
 }
 @media (max-width: 767px) {
@@ -67,6 +67,16 @@ header .header-top .top-section:active .show-top-header {
 header .header-top .top-section .first-top-section {
   padding-right: 10px;
   border-left: 1px solid #eee;
+}
+@media (max-width: 1355px) {
+  header .header-top .top-section.screen-b-1356 {
+    display: none;
+  }
+}
+@media (min-width: 1356px) {
+  header .header-top .top-section .screen-l-1356 {
+    display: none!important;
+  }
 }
 @media (max-width: 767px) {
   header .navbar-nav .top-section .open .dropdown-menu {
@@ -91,7 +101,7 @@ header .toggle-area {
   line-height: 1.42857143;
   display: inline-block;
   margin: 0 0 0 3px;
-  padding: 5px 10px;
+  padding: 5px 5px 5px 10px;
   cursor: pointer;
   text-align: center;
   vertical-align: bottom;
@@ -151,7 +161,8 @@ nav a.wp-mega-menu-link {
 }
 nav .navbar {
   min-height: 40px;
-  border-bottom: 2px solid #616161;
+  height: 42px;
+  border-bottom: 0;
   border-radius: 0;
   background: #5a5a5a;
   /* For browsers that do not support gradients */
@@ -214,8 +225,8 @@ nav #menu-hidden-coll {
   position: absolute;
   z-index: 900;
   top: 40px;
-  left: 15px;
   display: none;
+  text-align: left;
   min-width: 250px;
   max-width: 250px;
   background-color: #fff;
@@ -267,14 +278,19 @@ nav .company-links-menu .wp-megamenu-main-wrapper.wpmm-ctheme-wrapper.wpmega-hor
 }
 nav .company-links-menu .wp-megamenu-main-wrapper.wpmm-ctheme-wrapper.wpmega-horizontal.wpmm-orientation-horizontal ul.wpmm-mega-wrapper > li > a.wp-mega-menu-link {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
   line-height: 20px;
   padding: 10px 15px;
 }
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 992px) {
   nav .company-links-menu .wp-megamenu-main-wrapper.wpmm-ctheme-wrapper.wpmega-horizontal.wpmm-orientation-horizontal ul.wpmm-mega-wrapper > li > a.wp-mega-menu-link {
-    padding: 10px 30px;
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  nav .company-links-menu .wp-megamenu-main-wrapper.wpmm-ctheme-wrapper.wpmega-horizontal.wpmm-orientation-horizontal ul.wpmm-mega-wrapper > li > a.wp-mega-menu-link {
+    font-size: 13px;
   }
 }
 @media screen and (min-width: 1250px) {
@@ -282,10 +298,9 @@ nav .company-links-menu .wp-megamenu-main-wrapper.wpmm-ctheme-wrapper.wpmega-hor
     font-size: 16px;
   }
 }
-@media screen and (min-width: 1400px) {
-  nav .wp-megamenu-main-wrapper.wpmm-ctheme-wrapper.wpmega-horizontal.wpmm-orientation-horizontal ul.wpmm-mega-wrapper li .wpmm-sub-menu-wrap,
-  nav .wp-megamenu-main-wrapper.wpmm-ctheme-wrapper.wpmega-horizontal.wpmm-orientation-vertical ul.wpmm-mega-wrapper li .wpmm-sub-menu-wrap {
-    width: 1078px!important;
+@media screen and (min-width: 1500px) {
+  nav .company-links-menu .wp-megamenu-main-wrapper.wpmm-ctheme-wrapper.wpmega-horizontal.wpmm-orientation-horizontal ul.wpmm-mega-wrapper > li > a.wp-mega-menu-link {
+    padding: 10px 30px;
   }
 }
 .goog-te-gadget .goog-te-combo {
@@ -1041,8 +1056,20 @@ p.shipping-time-product {
 #wpmm-wrap-top .textwidget.custom-html-widget {
   width: 850px;
 }
-.wpmm-sub-menu-wrap li.wpmega-1columns-2total {
-  max-width: 290px;
+@media (min-width: 992px) {
+  .wpmm-sub-menu-wrap li.wpmega-1columns-2total {
+    max-width: 290px;
+  }
+}
+@media (min-width: 1200px) {
+  .wpmm-sub-menu-wrap li.wpmega-1columns-2total {
+    max-width: 400px;
+  }
+}
+@media (min-width: 1440px) {
+  .wpmm-sub-menu-wrap li.wpmega-1columns-2total {
+    max-width: 500px;
+  }
 }
 .wpmm-sub-menu-wrap {
   min-height: 498px;
@@ -1057,4 +1084,58 @@ a#grid.active {
 }
 .wpmm_megamenu .woocommerce ul.product_list_widget li a {
   font-size: 14px;
+}
+@media (min-width: 992px) {
+  .wp-megamenu-main-wrapper.wpmm-ctheme-wrapper.wpmega-horizontal.wpmm-orientation-horizontal ul.wpmm-mega-wrapper li .wpmm-sub-menu-wrap {
+    width: 100%!important;
+  }
+}
+.carousel-fade .carousel-inner .item {
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+.woocommerce .yith-wcbr-brands-logo img.attachment-medium.size-medium {
+  width: 150px;
+}
+.screen-b-1440 {
+  display: none;
+}
+.jQuery-plainOverlay-progress {
+  border-top: 3px solid #C11B21;
+}
+.woof_block_html_items input[type="checkbox"],
+.woof_block_html_items input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  background: #C11B21;
+  cursor: pointer;
+}
+.woof_text_search_container {
+  margin: 30px 0px;
+}
+.easy-autocomplete-container {
+  z-index: 500;
+}
+div.wpcf7-response-output {
+  margin: -5px 0px;
+  padding: 2em 1em;
 }

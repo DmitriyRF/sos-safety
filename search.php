@@ -12,10 +12,11 @@ get_header(); ?>
 				    <h1 class="page-title"><?php _e( 'Nothing Found', 'sos' ); ?></h1>
 				<?php endif; ?>
 				<div class="btn-group">
-				    <a href="#" id="list" class="btn btn-default btn-sm active">
-				    	<span class="glyphicon glyphicon-th-list"></span>  List view</a>
-				    <a href="#" id="grid" class="btn btn-default btn-sm">
+					<a href="#" id="grid" class="btn btn-default btn-sm active">
 				    	<span class="glyphicon glyphicon-th"></span>  Grid view</a>
+				    <a href="#" id="list" class="btn btn-default btn-sm ">
+				    	<span class="glyphicon glyphicon-th-list"></span>  List view</a>
+				    
 				</div>
 			</header><!-- .page-header -->
 
@@ -29,7 +30,7 @@ get_header(); ?>
 				    /* Start the Loop */
 				    while ( have_posts() ) : the_post(); ?>
 				    
-				        <article class="list-group-item">
+				        <article class="grid-group-item">
 				        	<?php 
 				        		if( has_post_thumbnail() ){
 				        	?>

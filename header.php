@@ -29,7 +29,7 @@
 								</button>
 							</div>
 							 <div class="collapse navbar-collapse" id="top-sos-safety-navigation">
-							 	<ul class="nav navbar-nav">
+							 	<ul class="nav navbar-nav navbar-right">
 									<li class="top-section">
 										<div class="show-top-header">
 											<div id="google_translate_element">
@@ -58,22 +58,35 @@
 											</ul>
 										</div>
 									</li>
+									<li class="top-section screen-b-1356">
+										<div class="show-top-header">						
+												<a href="mailto:<?php echo get_bloginfo( 'admin_email' ); ?>">
+											    	<span class="glyphicon glyphicon-envelope"></span>
+											    	<?php echo get_bloginfo( 'admin_email' ); ?>
+											    </a>
+										</div>
+									</li>	
+									<li class="top-section screen-b-1356">
+										<div class="show-top-header">						
+											<a href="<?php echo esc_url( get_permalink(142) ); ?>">
+												<i class="fa fa-info-circle" aria-hidden="true"></i> Information Request
+											</a>
+										</div>
+									</li>									
 									<li class="top-section">
 										<div class="show-top-header">						
 												<span class="glyphicon glyphicon-earphone"></span>
 											    <span><a href="tel:+15612374247">(561) 237-4247</a></span>
-											    <span class="toggle-area dropdown-toggle " data-toggle="dropdown">
+											    <span class="toggle-area dropdown-toggle screen-l-1356" data-toggle="dropdown">
 											    	<span class="caret"></span>
 											    	<span class="sr-only">Menu</span>
 											    </span>
-											<ul class="dropdown-menu">
+											<ul class="dropdown-menu screen-l-1356">
 											    <!-- <li><a href="#">Fax: (561) 237-4248</a></li> -->
-											    <li><a href="mailto:info@sos-safety.com">
-											    	<span class="glyphicon glyphicon-envelope"></span>
-											    	 info@sos-safety.com</a>
+											    <li><a href="mailto:<?php echo get_bloginfo( 'admin_email' ); ?>">
+											    	<span class="glyphicon glyphicon-envelope"></span>  <?php echo get_bloginfo( 'admin_email' ); ?></a>
 											    </li>
-											    <li role="presentation" class="divider"></li>
-											    <li><a href="<?php echo esc_url( get_permalink(17) ); ?>">Contact us</a></li>
+											    <li role="presentation" class="divider screen-l-1356"></li>
 											    <li><a href="<?php echo esc_url( get_permalink(142) ); ?>">Information Request</a></li>
 											</ul>
 										</div>
@@ -101,7 +114,9 @@
 						the_custom_logo();
 					} ?>
 				</div>
-				<div class="col-xs-7">
+				<div class="col-xs-7">								
+					<?php if(do_shortcode('[woof_text_filter]')){?>
+					<?php echo do_shortcode('[woof_text_filter]');}else{?>
 					<div id="custom-search-input" class="yith-ajaxsearchform-container">
 						<form class="navbar-form" id="yith-ajaxsearchform" action="<?php echo get_bloginfo('url'); ?>" role="search">
 							<div class="input-group col-md-12">
@@ -111,9 +126,11 @@
 								        <i class="glyphicon glyphicon-search"></i>
 								    </button>
 								</span>
+
 							</div>
 						</form>
-					</div>
+					</div>								
+					<?php } ?>
 				</div>
 			</div>
 		</div>
