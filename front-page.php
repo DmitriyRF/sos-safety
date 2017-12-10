@@ -50,19 +50,27 @@ if(!empty($slider)) { ?>
       </header>
     </div>    
 <?php } ?>       
-<!-- Hero image slider end -->       
-<!-- Categories slider start -->       
-<div class="categories-slider">         
-	<section class="categories-sec">
-		<div class="container">
+<!-- Hero image slider end -->
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+  <!-- Categories slider start -->       
+    <div class="categories-slider">         
+    	<section class="categories-sec">
+    		<div class="container">
 
-            <h3><a href="http://fastdev.in/sos-safety/products" class="hcat-title"><?php _e('View All Categories', 'sos'); ?></a></h3>
-            <?php echo do_shortcode('[woo_category_slider include_children="false" button_text="" cols="6"]'); ?>
+                <h3><a href="http://fastdev.in/sos-safety/products" class="hcat-title"><?php _e('View All Categories', 'sos'); ?></a></h3>
+                <?php echo do_shortcode('[woo_category_slider include_children="false" button_text="" cols="6"]'); ?>
 
-		</div>
-	</section>
-</div> 
+    		</div>
+    	</section>
+    </div>
+  </div>
+</div>
 <!-- Categories slider end -->
+<div class="container">
+    <div class="row">
 <!-- Client Logo -->
 <?php 
 $args = array(

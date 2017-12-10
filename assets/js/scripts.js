@@ -100,6 +100,19 @@ jQuery(function ($) {
     	});
 
 	});
+	
+	// $("a[href*='#']").mPageScroll2id();
+	//$("a.scroll-to-id").mPageScroll2id();
+	
+	$('.footer_bottom_col .woocommerce-product-search input[type="submit"]').val('GO');
+	
+	$('.woof_show_text_search').keydown(function(e) {
+		if (e.keyCode == 13) {
+			$('.woof_text_search_go').trigger('click');
+			return false;
+		}
+	});
+	
 });
 
 jQuery(window).load(function() {

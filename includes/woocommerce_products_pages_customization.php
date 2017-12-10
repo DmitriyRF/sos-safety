@@ -42,3 +42,12 @@ function woocommerce_get_product_thumbnail(
 
 	return $image;
 }
+
+// Change product search page title
+function sos_woocommerce_page_title($page_title) {
+	if((isset($_GET['sossafety']) && $_GET['sossafety'] == 1)) {
+		$page_title = __(sprintf('Search results for: %s', $_GET['woof_text']), 'sos');
+	}
+	return $page_title;
+}
+add_filter( 'woocommerce_page_title', 'sos_woocommerce_page_title', 10, 1  );

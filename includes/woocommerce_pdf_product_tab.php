@@ -22,12 +22,24 @@ function sos_catalog_tab_content_show_pdf_link_frontend() {
 	if(!empty($pdf_url)) {
         if ( count( $pdf_url ) > 0 && is_array($pdf_url)) {
             foreach( $pdf_url as $pdf_url_each ) {
-                if ( isset( $pdf_url_each) && $pdf_url_each != '') { 
-                    echo '<a class="pdf-catalog" href="'.$pdf_url_each.'" target="_blank">'.__('View catalog pdf', 'sos').'</a><br/>';
+                if ( isset( $pdf_url_each) && $pdf_url_each != '') {
+                    $file_name = array_pop( explode('/', $pdf_url_each ) );
+                    if( $file_name != '' ){ 
+                        echo '<a class="pdf-catalog" href="'.$pdf_url_each.'" target="_blank">'. $file_name .'</a><br/>';
+                    }else{
+                        echo '<a class="pdf-catalog" href="'.$pdf_url_each.'" target="_blank">'.__('View catalog pdf', 'sos').'</a><br/>';
+                    }
                 }       
             }
         }else{
-            echo '<a class="pdf-catalog" href="'.$pdf_url.'" target="_blank">'.__('View catalog pdf', 'sos').'</a><br/>';
+            $file_name = array_pop( explode('/', $pdf_url ) );
+            
+            if( $file_name != '' ){ 
+                echo '<a class="pdf-catalog" href="'.$pdf_url.'" target="_blank">'. $file_name .'</a><br/>';
+            }else{
+                echo '<a class="pdf-catalog" href="'.$pdf_url.'" target="_blank">'.__('View catalog pdf', 'sos').'</a><br/>';
+            }
+            
         }
 	}
 }

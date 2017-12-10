@@ -19,7 +19,7 @@ function sos_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-	for($i=1; $i<=4; $i++) {
+	for($i=1; $i<=3; $i++) {
 		register_sidebar( array(
 			'name'          => sprintf(__( 'Footer %d', 'sos' ), $i),
 			'id'            => 'footer-'.$i,

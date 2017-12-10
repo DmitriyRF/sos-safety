@@ -1,3 +1,4 @@
+<?php echo " <!-- Start header(header.php) --> "; ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js no-svg">
 <head>
@@ -65,14 +66,16 @@
 											    	<?php echo get_bloginfo( 'admin_email' ); ?>
 											    </a>
 										</div>
-									</li>	
+									</li>
+									<?php if( ! is_page(142) ) { ?>	
 									<li class="top-section screen-b-1356">
 										<div class="show-top-header">						
 											<a href="<?php echo esc_url( get_permalink(142) ); ?>">
-												<i class="fa fa-info-circle" aria-hidden="true"></i> Information Request
+												<i class="fa fa-info-circle" aria-hidden="true"></i> Request a Quote
 											</a>
 										</div>
-									</li>									
+									</li>
+									<?php } ?>									
 									<li class="top-section">
 										<div class="show-top-header">						
 												<span class="glyphicon glyphicon-earphone"></span>
@@ -158,29 +161,18 @@
 		</div>
 	</nav>
 	<?php
-	// if(!is_front_page() && !is_product()) {
-	// 	if(is_shop() || is_archive()){
-	// 		$page_id = wc_get_page_id('shop'); 
-	// 	}else{
-	// 		$page_id = get_the_ID();
-	// 	}
-	// 	$featured_img_url = get_the_post_thumbnail_url($page_id, 'full'); 	
-	// 	if(!$featured_img_url) {
-	// 		$featured_img_url = $template_url.'/assets/images/products.png';
-	// 	}
-	// 	if(!is_product_category()) {
-	// 		?>
-	<!-- 	 <div class="container">
-	 			<div class="head-img">
-					<img class="img-responsive" src="<?php// echo $featured_img_url; ?>" />
-	 			</div>
-			</div> -->
-	 		<?php
-	// 	}
-	// }
 	?> 
 	<?php 
-		echo is_product() ? '<div class="bg-grey"><div class="container inner-edge-shadow"><div class="row">' : '<div class="container"><div class="row">';
+		if ( is_product() ){
+			echo '<div class="bg-grey"> <div class="container inner-edge-shadow"> <div class="row">';
+		}else{
+			if ( is_page_template() ){
+
+			}else{
+				echo '<div class="container"><div class="row">';
+			}
+		}
 	?>
+	<?php echo " <!-- End header(header.php) --> "; ?>
 	
 		
