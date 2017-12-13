@@ -102,7 +102,7 @@ jQuery(function ($) {
 	});
 	
 	// $("a[href*='#']").mPageScroll2id();
-	//$("a.scroll-to-id").mPageScroll2id();
+	$("a.scroll-to-id").mPageScroll2id();
 	
 	$('.footer_bottom_col .woocommerce-product-search input[type="submit"]').val('GO');
 	

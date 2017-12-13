@@ -1,9 +1,9 @@
 /* Vars */
 /* Mixin */
 clearfix:after {
-  content: "";
   display: table;
   clear: both;
+  content: '';
 }
 header {
   color: #666;
@@ -142,14 +142,14 @@ header a {
 header .navbar-toggle {
   position: relative;
   float: right;
-  padding: 0;
   margin-top: 6px;
-  margin-right: 0px;
+  margin-right: 0;
   margin-bottom: 8px;
-  background-color: transparent;
-  background-image: none;
+  padding: 0;
   border: 1px solid transparent;
   border-radius: 0;
+  background-color: transparent;
+  background-image: none;
 }
 header .navbar-toggle .icon-bar {
   background: #363636 none repeat scroll 0 0;
@@ -173,22 +173,18 @@ nav a.wp-mega-menu-link {
   color: white;
 }
 nav .navbar {
-  min-height: 40px;
   height: 42px;
+  min-height: 40px;
   border-bottom: 0;
   border-radius: 0;
   background: #5a5a5a;
   /* For browsers that do not support gradients */
-
   background: -webkit-linear-gradient(#5a5a5a, #222222);
   /* For Safari 5.1 to 6.0 */
-
   background: -o-linear-gradient(#5a5a5a, #222222);
   /* For Opera 11.1 to 12.0 */
-
   background: -moz-linear-gradient(#5a5a5a, #222222);
   /* For Firefox 3.6 to 15 */
-
   background: linear-gradient(#5a5a5a, #222222);
 }
 nav #all-products-button {
@@ -222,16 +218,12 @@ nav #all-products-button:before {
 nav #all-products-button:hover {
   background: #777;
   /* For browsers that do not support gradients */
-
   background: -webkit-linear-gradient(#222222, #444444);
   /* For Safari 5.1 to 6.0 */
-
   background: -o-linear-gradient(#222222, #444444);
   /* For Opera 11.1 to 12.0 */
-
   background: -moz-linear-gradient(#222222, #444444);
   /* For Firefox 3.6 to 15 */
-
   background: linear-gradient(#222222, #444444);
 }
 nav #menu-hidden-coll {
@@ -239,9 +231,9 @@ nav #menu-hidden-coll {
   z-index: 900;
   top: 40px;
   display: none;
-  text-align: left;
   min-width: 250px;
   max-width: 250px;
+  text-align: left;
   background-color: #fff;
 }
 nav #menu-hidden-coll:hover {
@@ -253,16 +245,12 @@ nav .active-menu {
 nav .hover-background {
   background: #777;
   /* For browsers that do not support gradients */
-
   background: -webkit-linear-gradient(#222222, #444444);
   /* For Safari 5.1 to 6.0 */
-
   background: -o-linear-gradient(#222222, #444444);
   /* For Opera 11.1 to 12.0 */
-
   background: -moz-linear-gradient(#222222, #444444);
   /* For Firefox 3.6 to 15 */
-
   background: linear-gradient(#222222, #444444);
 }
 nav .wp-megamenu-main-wrapper.wpmm-orientation-vertical {
@@ -277,16 +265,12 @@ nav .company-links-menu {
 nav .company-links-menu .wp-megamenu-main-wrapper.wpmm-ctheme-wrapper.wpmega-horizontal.wpmm-orientation-horizontal ul.wpmm-mega-wrapper > li:hover {
   background: #777;
   /* For browsers that do not support gradients */
-
   background: -webkit-linear-gradient(#222222, #444444);
   /* For Safari 5.1 to 6.0 */
-
   background: -o-linear-gradient(#222222, #444444);
   /* For Opera 11.1 to 12.0 */
-
   background: -moz-linear-gradient(#222222, #444444);
   /* For Firefox 3.6 to 15 */
-
   background: linear-gradient(#222222, #444444);
 }
 nav .company-links-menu .wp-megamenu-main-wrapper.wpmm-ctheme-wrapper.wpmega-horizontal.wpmm-orientation-horizontal ul.wpmm-mega-wrapper > li > a.wp-mega-menu-link {
@@ -543,19 +527,14 @@ h3 {
 }
 .image-square-thumbnail {
   position: relative;
-  min-height: 200px;
   display: block;
   /* Extra small devices (phones, less than 768px) */
-
   /* No media query since this is the default in Bootstrap */
-
   overflow: hidden;
+  min-height: 200px;
   /* Small devices (tablets, 768px and up) */
-
   /* Medium devices (desktops, 992px and up) */
-
   /* Large devices (large desktops, 1200px and up) */
-
 }
 @media (min-width: 768px) {
   .image-square-thumbnail {
@@ -735,7 +714,6 @@ h3 {
 .woocommerce form .form-row input.input-text,
 .woocommerce form .form-row textarea {
   /* border-radius: 4px; */
-
   font-size: 14px;
   padding: 10px 10px;
   background: #eee;
@@ -880,8 +858,8 @@ div#mega-menu-wrap-primary .left-top-mega-menu-image {
 }
 #search:before,
 #search:after {
-  content: " ";
   display: table;
+  content: ' ';
 }
 #search:after {
   clear: both;
@@ -906,13 +884,13 @@ div#mega-menu-wrap-primary .left-top-mega-menu-image {
   margin: 0 auto;
 }
 #search .list-group-item:after {
-  clear: both;
   display: table;
-  content: "";
+  clear: both;
+  content: '';
 }
 #search .grid-group-item {
-  overflow: auto;
   float: left;
+  overflow: auto;
   width: 50%;
 }
 @media (max-width: 991px) {
@@ -937,15 +915,15 @@ div#mega-menu-wrap-primary .left-top-mega-menu-image {
   }
 }
 #search .grid-group-item .card-image {
-  min-height: 200px;
   overflow: hidden;
-  min-width: 100%;
   width: 100%;
+  min-width: 100%;
+  min-height: 200px;
 }
 #search .grid-group-item .card-image a {
+  position: relative;
   display: block;
   min-height: 200px;
-  position: relative;
 }
 #search .grid-group-item .card-image img {
   position: absolute;
@@ -1089,11 +1067,11 @@ p.shipping-time-product {
 }
 a#list.active {
   color: white;
-  background: #C11B21;
+  background: #c11b21;
 }
 a#grid.active {
   color: white;
-  background: #C11B21;
+  background: #c11b21;
 }
 .wpmm_megamenu .woocommerce ul.product_list_widget li a {
   font-size: 14px;
@@ -1133,23 +1111,23 @@ a#grid.active {
   display: none;
 }
 .jQuery-plainOverlay-progress {
-  border-top: 3px solid #C11B21;
+  border-top: 3px solid #c11b21;
 }
-.woof_block_html_items input[type="checkbox"],
-.woof_block_html_items input[type="radio"] {
+.woof_block_html_items input[type='checkbox'],
+.woof_block_html_items input[type='radio'] {
   width: 18px;
   height: 18px;
-  background: #C11B21;
   cursor: pointer;
+  background: #c11b21;
 }
 .woof_text_search_container {
-  margin: 30px 0px;
+  margin: 30px 0;
 }
 .easy-autocomplete-container {
   z-index: 500;
 }
 div.wpcf7-response-output {
-  margin: -5px 0px;
+  margin: -5px 0;
   padding: 2em 1em;
 }
 body.page-template-training-page {
@@ -1159,6 +1137,37 @@ body.page-template-training-page .parallax-window {
   min-height: 650px;
   background: transparent;
 }
+body.page-template-training-page .modal-dialog {
+  margin: 30px 0 0 0;
+}
+@media (min-width: 768px) {
+  body.page-template-training-page .modal-dialog {
+    width: 600px;
+    margin: 100px auto;
+  }
+}
+body.page-template-training-page .modal .modal-title {
+  font-size: 23px;
+  font-weight: 900;
+  line-height: 23px;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: #c11b21;
+}
+body.page-template-training-page .modal .modal-body .header {
+  text-align: center;
+  color: #c11b21;
+}
+body.page-template-training-page .modal .modal-body .modal-rules {
+  font-size: 13px;
+  margin-top: 0;
+  padding-top: 0;
+  text-align: center;
+  color: #503030;
+}
 body.page-template-training-page .header-section-line {
   min-height: 70px;
   padding: 20px 0;
@@ -1166,14 +1175,14 @@ body.page-template-training-page .header-section-line {
 }
 body.page-template-training-page .header-section-line h2 {
   font-size: 40px;
-  color: white;
   font-weight: bold;
   line-height: 40px;
   text-transform: uppercase;
+  color: white;
 }
 body.page-template-training-page .introduce {
-  min-height: calc(100vh - 175px);
   position: relative;
+  min-height: calc(100vh - 175px);
   padding-top: 90px;
 }
 body.page-template-training-page .introduce .backgroung-horizontal-line {
@@ -1188,43 +1197,43 @@ body.page-template-training-page .introduce .backgroung-horizontal-line {
 }
 body.page-template-training-page .introduce .backgroung-horizontal-line h1 {
   font-size: 50px;
+  font-weight: bold;
   line-height: 40px;
   margin: 40px auto;
   text-align: center;
   color: white;
-  font-weight: bold;
 }
 body.page-template-training-page .introduce .backgroung-horizontal-line h1 span {
-  color: #C11B21;
+  color: #c11b21;
 }
 body.page-template-training-page .introduce .button-set {
   max-width: 450px;
   margin: 130px auto;
 }
 body.page-template-training-page .introduce .button-set a {
-  display: block;
-  background-color: #C11B21;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: white;
-  line-height: 23px;
   font-size: 23px;
-  text-align: center;
-  padding: 30px 30px;
-  letter-spacing: 0;
   font-weight: 900;
+  line-height: 23px;
+  display: block;
   width: 100%;
   max-width: 350px;
   margin: 0 auto;
+  padding: 30px 30px;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: white;
+  background-color: #c11b21;
 }
 body.page-template-training-page .introduce .button-set p {
-  width: 100%;
-  text-align: center;
-  padding: 6px 0;
-  margin: 0;
-  color: white;
   font-size: 20px;
   font-weight: 900;
+  width: 100%;
+  margin: 0;
+  padding: 6px 0;
+  text-align: center;
+  color: white;
 }
 body.page-template-training-page .introduce .page-description {
   max-width: 450px;
@@ -1232,60 +1241,60 @@ body.page-template-training-page .introduce .page-description {
 }
 body.page-template-training-page .introduce .page-description .first-line {
   font-size: 50px;
+  position: relative;
   width: 100%;
   max-width: 400px;
-  position: relative;
-  color: white;
+  margin: 0 auto;
+  padding: 10px 5px 0;
   text-align: center;
   text-transform: uppercase;
-  padding: 10px 5px 0;
-  margin: 0 auto;
+  color: white;
 }
 body.page-template-training-page .introduce .page-description p {
-  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 30px;
   text-align: center;
   text-transform: uppercase;
-  font-size: 26px;
-  line-height: 30px;
-  font-weight: bold;
+  color: white;
 }
 body.page-template-training-page .introduce .page-description p span {
-  display: inline-block;
-  background-color: white;
-  padding: 3px 5px;
-  color: #c11b21;
-  line-height: 29px;
   font-size: 30px;
   font-weight: bold;
+  line-height: 29px;
+  display: inline-block;
+  padding: 3px 5px;
+  color: #c11b21;
+  background-color: white;
 }
 body.page-template-training-page .contact-form-seven {
-  background-color: white;
   min-height: 300px;
   padding: 100px 0;
   text-align: center;
+  background-color: white;
 }
 body.page-template-training-page .contact-form-seven .form-ctl {
-  text-transform: uppercase;
   font-size: 40px;
-  color: #0D2435;
-  text-align: center;
   font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #0d2435;
 }
 body.page-template-training-page .contact-form-seven input {
-  border-color: #C11B21;
-  border-width: 2px;
-  border-style: solid;
-  padding: 5px 10px;
   font-size: 20px;
   width: 100%;
   max-width: 300px;
   margin: 10px auto;
+  padding: 5px 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #c11b21;
 }
-body.page-template-training-page .contact-form-seven input[type="submit"] {
-  text-transform: uppercase;
-  background-color: #C11B21;
-  color: white;
+body.page-template-training-page .contact-form-seven input[type='submit'] {
   font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  background-color: #c11b21;
 }
 body.page-template-training-page .overview {
   padding: 70px 0;
@@ -1293,162 +1302,174 @@ body.page-template-training-page .overview {
 }
 body.page-template-training-page .overview .h2-overview-header {
   font-size: 40px;
-  color: white;
   font-weight: bold;
   line-height: 40px;
-  text-transform: uppercase;
   margin: 20px 0 10px;
+  text-transform: uppercase;
+  color: white;
   background-color: rgba(50, 0, 0, 0.2);
 }
 body.page-template-training-page .overview .overview-description {
-  margin-top: 150px;
   font-size: 20px;
   font-weight: 600;
+  margin-top: 150px;
+  text-align: center;
   color: white;
 }
 body.page-template-training-page .levels-of-training {
-  background-color: white;
   padding-bottom: 70px;
+  background-color: white;
 }
 body.page-template-training-page .levels-of-training .column-level {
-  padding: 20px 10px;
   margin-top: 50px;
+  padding: 20px 10px;
 }
 body.page-template-training-page .levels-of-training .column-level:hover {
-  box-shadow: 3px 3px 14px #999;
   transition: box-shadow 0.3s linear;
+  box-shadow: 3px 3px 14px #999;
 }
 body.page-template-training-page .levels-of-training .h3-level {
-  margin: 20px 0 10px;
-  text-transform: uppercase;
   font-size: 25px;
-  text-align: center;
-  color: #121010;
   font-weight: 700;
+  margin: 20px 0 10px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #121010;
 }
 body.page-template-training-page .levels-of-training .h4-level-description {
-  margin: 20px 0 10px;
-  min-height: 70px;
-  text-transform: uppercase;
   font-size: 19px;
+  font-weight: 400;
+  min-height: 70px;
+  margin: 20px 0 10px;
   text-align: center;
   vertical-align: middle;
-  color: #000000;
-  font-weight: 400;
+  text-transform: uppercase;
+  color: #000;
 }
 body.page-template-training-page .levels-of-training .image-level-1,
 body.page-template-training-page .levels-of-training .image-level-2,
 body.page-template-training-page .levels-of-training .image-level-3 {
   display: block;
-  height: 300px;
   width: auto;
+  height: 300px;
   margin: 0 auto;
 }
 body.page-template-training-page .levels-of-training .image-level-1 img,
 body.page-template-training-page .levels-of-training .image-level-2 img,
 body.page-template-training-page .levels-of-training .image-level-3 img {
-  margin: 0 auto;
   display: block;
+  margin: 0 auto;
 }
 body.page-template-training-page .levels-of-training .description-level {
   font-size: 20px;
-  text-align: center;
   max-width: 300px;
-  margin: 0 auto;
   min-height: 150px;
+  margin: 0 auto;
+  text-align: center;
 }
 body.page-template-training-page .levels-of-training .button-level {
-  text-align: center;
-  text-transform: uppercase;
   font-size: 20px;
-  text-decoration: none;
   display: block;
-  background-color: #c11b21;
-  color: white;
-  padding: 5px 10px;
   margin: 0 auto;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  background-color: #c11b21;
 }
 body.page-template-training-page .process {
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 50px 0;
   min-height: 300px;
+  padding: 50px 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+body.page-template-training-page .process p {
+  color: #212020;
 }
 body.page-template-training-page .process .h2-process-header {
   font-size: 40px;
-  color: black;
   font-weight: bold;
   line-height: 40px;
-  text-transform: uppercase;
   margin: 20px 0 10px;
-}
-body.page-template-training-page .process .process-step {
+  text-transform: uppercase;
   color: black;
 }
+body.page-template-training-page .process .precess-description {
+  font-size: 20px;
+  text-align: center;
+}
+body.page-template-training-page .process .process-step {
+  padding: 30px 5px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.5);
+}
 body.page-template-training-page .process .process-step .h3-process {
-  font-size: 45px;
+  font-size: 35px;
   font-weight: bold;
   line-height: 30px;
-  text-transform: uppercase;
+  padding-bottom: 5px;
   text-align: center;
+  text-transform: uppercase;
+  border-bottom: 3px solid #c11b21;
 }
 body.page-template-training-page .process .process-step .h3-process span {
-  text-align: center;
   font-size: 15px;
   line-height: 20px;
+  text-align: center;
 }
 body.page-template-training-page .process .process-step .description-process {
+  font-size: 20px;
   text-align: center;
-  font-size: 16px;
 }
 body.page-template-training-page .process .details-tab-wrapper {
-  text-align: center;
   margin-bottom: 70px;
+  text-align: center;
 }
 body.page-template-training-page .process .details-tab-wrapper .nav-pills {
   display: inline-block;
   margin: 20px auto;
 }
 body.page-template-training-page .process .details-tab-wrapper .nav-pills li {
-  background-color: rgba(255, 255, 255, 0.55);
   min-width: 170px;
+  background-color: rgba(255, 255, 255, 0.55);
 }
 body.page-template-training-page .process .details-tab-wrapper .nav-pills li + li {
   margin-left: 20px;
 }
 body.page-template-training-page .process .details-tab-wrapper .nav-pills li.active > a {
-  background-color: #000000;
+  background-color: #000;
 }
 body.page-template-training-page .process .details-tab-wrapper .nav-pills li a {
-  border-radius: 0px;
   font-size: 16px;
-  text-transform: uppercase;
   font-weight: 900;
+  text-transform: uppercase;
+  border-radius: 0;
 }
 body.page-template-training-page .process .details-tab-wrapper .tab-content {
   margin-top: 70px;
   text-align: left;
 }
 body.page-template-training-page .process .details-tab-wrapper .tab-content li {
-  list-style: disc;
   margin: 5px 0;
+  list-style: disc;
 }
 body.page-template-training-page .process .details-tab-wrapper .image-details {
   width: 100%;
   max-width: 400px;
-  text-align: center;
   height: auto;
+  text-align: center;
 }
 body.page-template-training-page .process .advantages-set {
   color: black;
 }
 body.page-template-training-page .process .advantages-set .icon-advantage {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
   text-align: center;
   color: rgba(25, 25, 25, 0.55);
   border: 10px solid rgba(255, 255, 255, 0.55);
   border-radius: 50%;
-  height: 150px;
-  width: 150px;
-  margin: 0 auto;
 }
 body.page-template-training-page .process .advantages-set .icon-advantage i.fa {
   line-height: 130px;
@@ -1461,21 +1482,114 @@ body.page-template-training-page .process .advantages-set .h3-advantage {
   font-size: 30px;
   font-weight: bold;
   line-height: 30px;
-  text-transform: uppercase;
-  text-align: center;
   margin-top: 40px;
+  text-align: center;
+  text-transform: uppercase;
 }
 body.page-template-training-page .process .advantages-set .decription-advantage {
+  font-size: 16px;
   margin-top: 30px;
   text-align: center;
-  font-size: 16px;
+}
+body.page-template-training-page .advantages-description .illustration {
+  position: relative;
+  min-width: 100%;
+  min-height: 100%;
+  max-height: none;
+  max-width: none;
+}
+body.page-template-training-page .advantages-description .table-wrap {
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+body.page-template-training-page .advantages-description .table-direction {
+  display: block;
+  border: 10px solid #c11b21;
+}
+body.page-template-training-page .advantages-description .table-cell {
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+body.page-template-training-page .advantages-description .advantages-text {
+  height: 100%;
+  min-height: 1px;
+  padding: 50px 30px;
+}
+body.page-template-training-page .advantages-description .adv-desc-h2 {
+  padding: 0;
+  margin: 20px 0;
+  text-transform: uppercase;
+  font-size: 25px;
+  color: #c11b21;
+}
+body.page-template-training-page .advantages-description p {
+  font-size: 18px;
+  text-align: justify;
+}
+@media (min-width: 768px) {
+  body.page-template-training-page .advantages-description .table-direction {
+    display: table-row;
+    border: 0;
+  }
+  body.page-template-training-page .advantages-description .table-cell {
+    width: 50%;
+    display: table-cell;
+  }
+  body.page-template-training-page .advantages-description .table-wrap {
+    table-layout: fixed;
+    display: table;
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+  body.page-template-training-page .advantages-description .illustration {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    max-height: none;
+    max-width: none;
+    transform: translate3d(-50%, -50%, 0);
+  }
+  body.page-template-training-page .advantages-description .advantages-text {
+    padding: 100px 30px;
+    min-height: 500px;
+  }
+  body.page-template-training-page .advantages-description .left-side {
+    text-align: left;
+    padding-right: 50px;
+  }
+  body.page-template-training-page .advantages-description .right-side {
+    text-align: right;
+    padding-left: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  body.page-template-training-page .advantages-description .left-side {
+    padding-right: 150px;
+  }
+  body.page-template-training-page .advantages-description .right-side {
+    padding-left: 150px;
+  }
+  body.page-template-training-page .advantages-description .adv-desc-h2 {
+    font-size: 35px;
+  }
 }
 body.page-template-training-page .testimonials {
   min-height: 500px;
 }
 body.page-template-training-page .testimonials .carousel {
-  margin: 80px auto;
   min-height: 400px;
+  margin: 80px auto;
 }
 body.page-template-training-page .testimonials .carousel-control {
   width: 35%;
@@ -1485,10 +1599,10 @@ body.page-template-training-page .testimonials .carousel-control.right {
 }
 body.page-template-training-page .testimonials .carousel-control.right .fa {
   position: absolute;
-  transform: translateY(-50%);
   top: 50%;
   right: 0;
   margin-right: -50px;
+  transform: translateY(-50%);
   color: black;
 }
 body.page-template-training-page .testimonials .carousel-control.left {
@@ -1496,111 +1610,111 @@ body.page-template-training-page .testimonials .carousel-control.left {
 }
 body.page-template-training-page .testimonials .carousel-control.left .fa {
   position: absolute;
-  transform: translateY(-50%);
   top: 50%;
   left: 0;
   margin-left: -50px;
+  transform: translateY(-50%);
   color: black;
 }
 body.page-template-training-page .testimonials .logo-testimonials {
-  border-radius: 50%;
-  height: 120px;
-  width: 120px;
-  margin: 0 auto;
   position: relative;
   overflow: hidden;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  border-radius: 50%;
 }
 body.page-template-training-page .testimonials .logo-testimonials img {
-  min-width: 100%;
-  min-height: 100%;
-  height: 100%;
-  max-width: none;
   position: absolute;
   top: 50%;
   left: 50%;
+  min-width: 100%;
+  max-width: none;
+  height: 100%;
+  min-height: 100%;
   transform: translate(-50%, -50%);
 }
 body.page-template-training-page .testimonials .h3-name-testimonials {
+  font-size: 20px;
+  line-height: 40px;
   height: 120px;
   margin: 0;
   padding: 40px 20px 0 0;
-  font-size: 20px;
-  line-height: 40px;
 }
 body.page-template-training-page .testimonials .descriptions-testimonials {
-  margin-top: 40px;
-  padding: 0px 20px;
   font-size: 18px;
+  margin-top: 40px;
+  padding: 0 20px;
 }
 body.page-template-training-page .questions {
   padding: 70px 0;
 }
 body.page-template-training-page .questions.invert {
-  background-color: #24242C;
   color: white;
+  background-color: #24242c;
 }
 body.page-template-training-page .questions .h2-questions-header {
   font-size: 40px;
   font-weight: bold;
   line-height: 40px;
-  text-transform: uppercase;
   margin: 20px 0 10px;
+  text-transform: uppercase;
 }
 body.page-template-training-page .questions .panel-default > .panel-heading {
-  color: #FFF;
-  background-color: #37373F;
-  border-color: #24242C;
-  border-radius: 0;
   text-transform: uppercase;
+  color: #fff;
+  border-color: #24242c;
+  border-radius: 0;
+  background-color: #37373f;
 }
 body.page-template-training-page .questions .panel-default > .panel-heading + .panel-collapse > .panel-body {
+  color: black;
   border-top-color: #c11b21;
   background-color: #999;
-  color: black;
 }
 body.page-template-training-page .questions .panel-group .panel {
   margin-bottom: 0;
-  border-radius: 0px;
-  border-color: #12121A;
+  border-color: #12121a;
+  border-radius: 0;
 }
 body.page-template-training-page .contact-us {
-  min-height: 350px;
-  background: url(assets/images/woman-call.jpg) center right no-repeat;
-  background-size: cover;
   position: relative;
+  min-height: 350px;
+  background: url(assets/images/call-support.png) center right no-repeat;
+  background-size: cover;
 }
 body.page-template-training-page .contact-us:before {
-  content: '';
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  content: '';
   background-image: linear-gradient(to right, #ffffff 40%, rgba(255, 255, 255, 0));
 }
 body.page-template-training-page .contact-us .h2-contactus-header {
   font-size: 40px;
   font-weight: bold;
   line-height: 40px;
-  text-transform: uppercase;
   margin: 20px 0 10px;
+  text-transform: uppercase;
   color: black;
 }
 body.page-template-training-page .contact-us .input-group {
-  margin: 30px 0;
-  max-width: 500px;
   width: 100%;
+  max-width: 500px;
+  margin: 30px 0;
 }
 body.page-template-training-page .contact-us .form-control {
-  height: 50px;
-  padding: 6px 12px;
   font-size: 16px;
   line-height: 1.42857143;
+  height: 50px;
+  padding: 6px 12px;
   color: #555;
+  border: 1px solid #ccc;
+  border-radius: 0;
   background-color: #fff;
   background-image: none;
-  border: 1px solid #ccc;
-  border-radius: 0px;
 }
 body.page-template-training-page .contact-us .form-textarea {
   width: 100%;

@@ -9,6 +9,26 @@
 <?php echo '<!-- ' . basename( get_page_template() ) . ' -->'; ?>
 <?php $meta = get_post_meta( $post->ID, 'section', true ); ?>
 
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      	<div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <h2 class="modal-title" id="myModalLabel">Request More Information</h2>
+				     </div>
+				     <div class="modal-body">
+				     	<h3 class="header">Have a question or Ready to register?</h3>
+				     	<p class="modal-rules">Please enter the relevant information below and we will get back to you as soon as possible.</p>
+				     </div>
+<!-- 				     <div class="modal-footer">
+					        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					        <button type="button" class="btn btn-primary">Save changes</button>
+				     </div> -->
+			    </div>
+		  </div>
+	</div>
+
 	<section id="section-1" class="introduce parallax-window" data-parallax="scroll" data-image-src="<?php echo $meta['image']; ?>">				
 		<div class="backgroung-horizontal-line">
 			<div class="container-fluid">
@@ -23,7 +43,7 @@
 			<div class="row">
 				<div class="col-xs-12 col-md-6">
 					<div class="button-set">
-						<a href="">Start training</a>
+						<a type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Start training</a>
 						<p>or</p>
 						<a href="#section-6" class="scroll-to-id">Learn more</a>
 					</div>
@@ -31,7 +51,7 @@
 				<div class="col-xs-12 col-md-6">
 					<div class="page-description">
 						<h2 class="first-line"><span >we prepared</span></h2>
-						<p><span class="counter">849</span> highly qualified professional specialist</p>
+						<p><span class="counter">319</span> highly qualified professional specialist</p>
 					</div>
 				</div>
 			</div>
@@ -125,158 +145,103 @@
 		</div>
 	</section>
 	<section id="section-4" class="process parallax-window" data-parallax="scroll" data-image-src="<?php echo $meta['image']; ?>">
-		<h2 class="h2-process-header">Learning process</h2>
+		<h2 class="h2-process-header">EMERGENCY RESPONSE TRAINING DIVISION</h2>
 		<div class="container">
 			<div class="row">
+				<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+					<p class="precess-description">
+						Our goal is to customize your training program in compliance with international and national standards as well to follow your company policy and requirements. We have a team of certified experts in the field that will provide to your company a well structure and standardized training program. Our programs are organized into specific levels of expertise that will assist you in the selection of the proper training course.
+					</p>
+					<p class="precess-description">
+						In addition of our Oil Spill Response courses we also offer HAZWOPER courses under the OSHA standard 1910.120. Which include for Hazardous Waste and for Marine Oil Spills. This courses covers and meet or exceed the standard and can be tailored for our customers in and provide at their facilities. The levels of training we provide under these programs are:
+					</p>
+				</div>
 				<div class="col-xs-12 col-sm-6 col-md-3">
 					<div class="process-step">
-						<h3 class="h3-process">1<br>
-						<span>step</span></h3>
-						<p class="description-process">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum ea libero minus dolor reiciendis nostrum, facilis quos. Laudantium tempore, dignissimos, provident sunt placeat necessitatibus neque ipsam magnam delectus laboriosam reiciendis.</p>
+						<h3 class="h3-process">Awareness</h3>
+						<!-- <span>step</span></h3> -->
+						<p class="description-process">Awareness-level training courses teach people general skills. Awareness is the key to preventative management - catching potential problems before they start.</p>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-3">
 					<div class="process-step">
-						<h3 class="h3-process">2<br>
-						<span>step</span></h3>
-						<p class="description-process">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam harum molestiae dignissimos accusamus cum reiciendis illum fugiat consequuntur sapiente sit animi illo consectetur iure dolore incidunt voluptatibus, facilis consequatur dolorum!</p>
+						<h3 class="h3-process">Operations</h3>
+						<p class="description-process">Level of training combines planning and implementing with a well-trained team. Additional training in incident management, specific skills and effective decision-making is necessary for this level.</p>
 					</div>
 				</div>
 				<div class="clearfix visible-sm"></div>
 				<div class="col-xs-12 col-sm-6 col-md-3">
 					<div class="process-step">
-						<h3 class="h3-process">3<br>
-						<span>step</span></h3>
-						<p class="description-process">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima hic eos perspiciatis assumenda repellendus a repudiandae eius, odit nulla corporis reiciendis maxime molestiae, maiores unde eaque, earum sint libero neque?</p>
+						<h3 class="h3-process">Technician</h3>
+						<p class="description-process">These courses are designed for offensive operations technician. Most offerings include intense, hand-on fieldwork, which is required to learn the technical skills required to effectively deal with a variety of emergency situations.</p>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-6 col-md-3">
 					<div class="process-step">
-						<h3 class="h3-process">4<br>
-						<span>step</span></h3>
-						<p class="description-process">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo tempora vitae dignissimos necessitatibus quibusdam. Similique inventore, enim, saepe error fuga vitae optio minus perspiciatis, quo voluptatem recusandae repellat. Sint, porro.</p>
+						<h3 class="h3-process">Specialist</h3>
+						<p class="description-process">These targeted courses are for specific competences. Our specialty courses have been designed to teach important skills, to responders for situations in corporate settings or major events.</p>
 					</div>
 				</div>
 			</div>
 		</div>
-		<h2 class="h2-process-header">Details</h2>
-		<div class="details-tab-wrapper">
-			<div class="container">
-				<div class="row">
-					<!-- Nav tabs -->
-					<div class="col-xs-12">
-						<ul class="nav nav-pills" role="tablist">
-							<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Day 1</a></li>
-							<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Day 2</a></li>
-							<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Day 3</a></li>
-							<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Day 4</a></li>
-						</ul>
-					</div>
-					<div class="col-xs-12">
-						<div class="tab-content">
-						  <div role="tabpanel" class="tab-pane fade in active" id="home">
-						  	<div class="row">
-							  	<div class="col-xs-12 col-sm-6">
-									<ol>
-										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem voluptas eum porro iste esse. Ea laborum eligendi, facere labore aliquid, cumque consequuntur, sapiente quaerat vero maxime est odit officiis facilis!</li>
-										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem id cumque earum voluptates officia minima, nesciunt, accusantium repellendus eaque aspernatur rerum minus error totam nam reprehenderit animi, voluptas! Quas, debitis!</li>
-										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem voluptas eum porro iste esse. Ea laborum eligendi, facere labore aliquid, cumque consequuntur, sapiente quaerat vero maxime est odit officiis facilis!</li>
-									</ol>
-							  	</div>
-							  	<div class="col-xs-12 col-sm-6">
-							  		<img src="<?php echo get_template_directory_uri() . '/assets/images/day-training.jpg'; ?>" alt="" class="image-details">
-							  	</div>
-						  	</div>
+	</section>
+	<section id="section-9" class="advantages-description">
+		<div class="table-wrap" cellspacing="0" cellpadding="0" >
 
-						  </div>
-						  <div role="tabpanel" class="tab-pane fade" id="profile">
-						  	<div class="row">
-						  		<div class="col-xs-12 col-sm-6">
-									<ol>
-										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam hic nostrum rem voluptas nulla sed alias molestias, architecto quaerat perferendis voluptatibus perspiciatis dignissimos mollitia magnam at, debitis fugit praesentium enim.</li>
-										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem voluptas eum porro iste esse. Ea laborum eligendi, facere labore aliquid, cumque consequuntur, sapiente quaerat vero maxime est odit officiis facilis!</li>
-										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem id cumque earum voluptates officia minima, nesciunt, accusantium repellendus eaque aspernatur rerum minus error totam nam reprehenderit animi, voluptas! Quas, debitis!</li>
-									</ol>
-						  		</div>
-						  		<div class="col-xs-12 col-sm-6">
-						  			<img src="<?php echo get_template_directory_uri() . '/assets/images/day-training.jpg'; ?>" alt="" class="image-details">
-						  		</div>
-						  	</div>
-						  </div>
-						  <div role="tabpanel" class="tab-pane fade" id="messages">
-						  	<div class="row">
-						  		<div class="col-xs-12 col-sm-6">
-									<ol>
-										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima modi rem corrupti similique possimus quidem, dicta officia aliquid soluta optio sequi nam explicabo, illo quaerat qui ut quis atque dignissimos?</li>
-										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam hic nostrum rem voluptas nulla sed alias molestias, architecto quaerat perferendis voluptatibus perspiciatis dignissimos mollitia magnam at, debitis fugit praesentium enim.</li>
-										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem voluptas eum porro iste esse. Ea laborum eligendi, facere labore aliquid, cumque consequuntur, sapiente quaerat vero maxime est odit officiis facilis!</li>
-									</ol>
-						  		</div>
-						  		<div class="col-xs-12 col-sm-6">
-						  			<img src="<?php echo get_template_directory_uri() . '/assets/images/day-training.jpg'; ?>" alt="" class="image-details">
-						  		</div>
-						  	</div>
-						  </div>
-						  <div role="tabpanel" class="tab-pane fade" id="settings">
-						  	<div class="row">
-						  		<div class="col-xs-12 col-sm-6">
-									<ol>
-										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima modi rem corrupti similique possimus quidem, dicta officia aliquid soluta optio sequi nam explicabo, illo quaerat qui ut quis atque dignissimos?</li>
-										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem voluptas eum porro iste esse. Ea laborum eligendi, facere labore aliquid, cumque consequuntur, sapiente quaerat vero maxime est odit officiis facilis!</li>
-										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima modi rem corrupti similique possimus quidem, dicta officia aliquid soluta optio sequi nam explicabo, illo quaerat qui ut quis atque dignissimos?</li>
-									</ol>
-						  		</div>
-						  		<div class="col-xs-12 col-sm-6">
-						  			<img src="<?php echo get_template_directory_uri() . '/assets/images/day-training.jpg'; ?>" alt="" class="image-details">
-						  		</div>
-						  	</div>
-						  </div>
-						</div>	
+				<div class="table-direction">
+					<div class="table-cell">
+						<img class="illustration"  src="<?php echo get_template_directory_uri() . '/assets/images/training-sos-safety-com-cut.png'; ?>" alt="">
 					</div>
-				</div>
-			</div>
-		</div>
-		<h2 class="h2-process-header">Our advantages</h2>
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-sm-6 col-md-3">
-					<div class="advantages-set">
-						<div class="icon-advantage">
-							<i class="fa fa-binoculars fa-3x" aria-hidden="true"></i>
+					<div class="table-cell">
+						<div class="advantages-text">
+							<h2 class="adv-desc-h2 left-side">CONSULTING & TRAINING SERVICES</h2>						
+							<p class="left-side">Our team of consultants has over 60 years in emergency response experience. With expertise in emergency management, risk assessment and performed specialized industrial emergency response training from industrial firefighting, hazardous materials, hazardous waste operations, rescue, confined space, oil spill response and incident command systems. We develop table top exercise programs, major exercise planning process, emergency operations center simulations and exercises at different levels of the organization.</p>
 						</div>
-						<h3 class="h3-advantage">Experienced coach</h3>
-						<p class="decription-advantage">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos nam illum, quos, officia iure reiciendis dolorem exercitationem sapiente tempora vel hic ea perferendis eos ullam sunt earum nostrum! Deleniti, consequuntur!</p>
 					</div>
 				</div>
-				<div class="col-xs-12 col-sm-6 col-md-3">
-					<div class="advantages-set">
-						<div class="icon-advantage">
-							<i class="fa fa-book fa-3x" aria-hidden="true"></i>
+
+				<div class="table-direction">
+					<div class="table-cell">
+						<div class="advantages-text">
+							<h2 class="adv-desc-h2 right-side">Coverage</h2>						
+							<p class="right-side">Within Latin America, Central America and the Caribbean we provide specialized services emergency response  from incident command system, crisis management and business continuity planning, and conducted industrial response training, industrial firefighting NFPA 1081, fire instructor, rescue and hazmat response specialist courses.</p>
 						</div>
-						<h3 class="h3-advantage">Modern Equipment</h3>
-						<p class="decription-advantage">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, laudantium dolorum veritatis. Tempora optio, pariatur quos ut incidunt cum, in eum, laudantium, blanditiis repellat sit consectetur unde iusto assumenda ea.</p>
+					</div>
+					<div class="table-cell">
+						<img class="illustration" src="<?php echo get_template_directory_uri() . '/assets/images/Latin-America-Central-America-the-Caribbean-sos-safety-Coverage.png'; ?>" alt="">
 					</div>
 				</div>
-				<div class="clearfix visible-sm"></div>
-				<div class="col-xs-12 col-sm-6 col-md-3">
-					<div class="advantages-set">
-						<div class="icon-advantage">
-							<i class="fa fa-exclamation-triangle fa-3x" aria-hidden="true"></i>
+
+				<div class="table-direction">
+					<div class="table-cell">
+						<img class="illustration" src="<?php echo get_template_directory_uri() . '/assets/images/sos-safety-ship-reaction.jpg'; ?>" alt="">
+					</div>
+					<div class="table-cell">
+						<div class="advantages-text">
+							<h2 class="adv-desc-h2 left-side">Industry Services</h2>						
+							<p class="left-side">
+								SOS Safety offers a wide variety of services including but not limited to design and implement Emergency, Crisis and Continuity Management Programs.
+
+								SOS Safety develops response plans for a wide range of operations such as oil and gas fields and facilities, refineries, pipelines, storage and loading terminals, gas stations, chemical and manufacturing plants among others. 
+								 
+								SOS Safety offers a wide variety of training courses including but not limited to, Incident Command System, Incident Management Team, Oil Spill Response Planning, and Business Continuity Planning. Our Training programs will be conducted by certified and experienced international trainers who will conduct all training sessions in English, Spanish and Portuguese. Developing Training Material and Perform Training Courses
+
+							</p>
 						</div>
-						<h3 class="h3-advantage">Rich library</h3>
-						<p class="decription-advantage">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore fugit, veniam laboriosam corrupti asperiores minima rerum impedit obcaecati perspiciatis, dolor quasi accusantium corporis officiis provident. Iusto perspiciatis ipsa, dolor labore.</p>
 					</div>
 				</div>
-				<div class="col-xs-12 col-sm-6 col-md-3">
-					<div class="advantages-set">
-						<div class="icon-advantage">
-							<i class="fa fa-ship fa-3x" aria-hidden="true"></i>
+
+				<div class="table-direction">
+					<div class="table-cell">
+						<div class="advantages-text">
+							<h2 class="adv-desc-h2 right-side">Exercise Development and Facilitation.</h2>						
+							<p class="right-side">SOS SAFETY Staff has several years of experience conducting Drills and Exercises for the Oil & Gas industry. We have designed exercises for a wide variety of incident scenarios and facility operations like oil and gas fields (offshore and onshore), pipelines, tank farms, refineries, gas stations, airports and fuel and lubricants transportation systems</p>
 						</div>
-						<h3 class="h3-advantage">Bests results</h3>
-						<p class="decription-advantage">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, unde necessitatibus ducimus eaque minus impedit! Qui, voluptate, reiciendis aperiam ad dolores in delectus rerum vel dolorem. Soluta molestias alias, facere.</p>
+					</div>
+					<div class="table-cell">
+						<img class="illustration" src="<?php echo get_template_directory_uri() . '/assets/images/sos-safety-staff.jpg'; ?>" alt="">
 					</div>
 				</div>
-			</div>
 		</div>
 	</section>
 	<section id="section-5" class="testimonials">
@@ -353,60 +318,6 @@
 					  </a>
 					</div>
 				</div>
-			</div>
-		</div>
-	</section>
-	<section id="section-7" class="questions invert">
-		<h2 class="h2-questions-header">Questions</h2>
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-sm-6 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-						  <div class="panel panel-default">
-						    <div class="panel-heading" role="tab" id="headingOne">
-						      <h4 class="panel-title">
-						        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-						          Question #1
-						        </a>
-						      </h4>
-						    </div>
-						    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-						      <div class="panel-body">
-						        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-						      </div>
-						    </div>
-						  </div>
-						  <div class="panel panel-default">
-						    <div class="panel-heading" role="tab" id="headingTwo">
-						      <h4 class="panel-title">
-						        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-						        	Question #2
-						        </a>
-						      </h4>
-						    </div>
-						    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-						      <div class="panel-body">
-						        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-						      </div>
-						    </div>
-						  </div>
-						  <div class="panel panel-default">
-						    <div class="panel-heading" role="tab" id="headingThree">
-						      <h4 class="panel-title">
-						        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-						         	Question #3
-						        </a>
-						      </h4>
-						    </div>
-						    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-						      <div class="panel-body">
-						        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-						      </div>
-						    </div>
-						  </div>
-						</div>
-				</div>
-				<!-- <div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2">	</div> -->
 			</div>
 		</div>
 	</section>
